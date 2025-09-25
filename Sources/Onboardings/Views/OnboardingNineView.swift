@@ -1,8 +1,11 @@
-
 import SwiftUI
 
 public struct OnboardingNineView: View {
     let onNext: () -> Void
+    @State private var showContent = false
+    @State private var showGraphic = false
+    @State private var showNumbers = false
+    @State private var showButton = false
     
     public init(onNext: @escaping () -> Void) {
         self.onNext = onNext
@@ -18,6 +21,7 @@ public struct OnboardingNineView: View {
             ZStack {
                 Color.appBackground.ignoresSafeArea()
                 AppGradient.lightScrim.ignoresSafeArea()
+                
                 VStack {
                     textContent
                         .font(.interMedium(size: 36))
@@ -27,30 +31,55 @@ public struct OnboardingNineView: View {
                         .padding(.top, 16)
                         .padding(.leading, 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    HStack(alignment: .bottom){
+                        .offset(y: showContent ? 0 : -50)
+                        .opacity(showContent ? 1 : 0)
+                    
+                    HStack(alignment: .bottom) {
                         VStack(spacing: 0) {
                             Image(.walkingMan)
                                 .resizable()
-                                .frame(width: screenWidth * 0.07, height: isLargeScreen ? screenHeight * 0.373  : isSmallScreen ? screenHeight * 0.35 : screenHeight * 0.38)
+                                .frame(width: 26, height: isLargeScreen ? screenHeight * 0.373 : isSmallScreen ? screenHeight * 0.35 : screenHeight * 0.38)
+                                .offset(y: showGraphic ? 0 : 100)
+                                .opacity(showGraphic ? 1 : 0)
+                            
                             Image(.sleepEmoji)
                                 .resizable()
-                                .frame(width: screenWidth * 0.07, height: isLargeScreen ? screenHeight * 0.138  : isSmallScreen ? screenHeight * 0.110 : screenHeight * 0.120)
+                                .frame(width: 24, height: isLargeScreen ? screenHeight * 0.138 : isSmallScreen ? screenHeight * 0.110 : screenHeight * 0.120)
+                                .offset(y: showGraphic ? 0 : 100)
+                                .opacity(showGraphic ? 1 : 0)
                             
-
-                            Image(.years25)
-                                .resizable()
-                                .frame(width: screenWidth * 0.07, height: isSmallScreen ? screenHeight * 0.146 : screenHeight * 0.156)
+                            ZStack {
+                                Image(.lines)
+                                    .resizable()
+                                    .frame(width: 14, height: isSmallScreen ? screenHeight * 0.140 : screenHeight * 0.150)
+                                    .offset(y: showGraphic ? 0 : 100)
+                                    .opacity(showGraphic ? 1 : 0)
+                                
+                                Text("your\nage")
+                                    .font(.interMedium(size: 12))
+                                    .foregroundStyle(Color.white)
+                                    .offset(y: showGraphic ? 0 : 100)
+                                    .opacity(showGraphic ? 1 : 0)
+                            }
+                            .padding(.bottom, 2)
                         }
+                        
                         Image(.nineViewGraphic)
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
+                            .offset(y: showGraphic ? 0 : 100)
+                            .opacity(showGraphic ? 1 : 0)
                     }
                     .padding(.top, isLargeScreen ? 50 : 30)
+                    
                     Image(.cifry24)
                         .resizable()
                         .frame(maxWidth: 254, maxHeight: 20)
                         .padding(.leading, 100)
                         .padding(.bottom, 24)
+                        .offset(y: showNumbers ? 0 : 50)
+                        .opacity(showNumbers ? 1 : 0)
+                    
                     Button {
                         onNext()
                     } label: {
@@ -61,7 +90,30 @@ public struct OnboardingNineView: View {
                     .buttonStyle(PrimaryButtonStyle())
                     .padding(.horizontal, screenWidth * 0.04)
                     .padding(.bottom, screenHeight * 0.01)
+                    .offset(y: showButton ? 0 : 50)
+                    .opacity(showButton ? 1 : 0)
                 }
+            }
+        }
+        .onAppear {
+            // Анимация текста
+            withAnimation(.easeOut(duration: 0.6)) {
+                showContent = true
+            }
+            
+            // Анимация графики с задержкой
+            withAnimation(.easeOut(duration: 0.6).delay(0.3)) {
+                showGraphic = true
+            }
+            
+            // Анимация цифр с дополнительной задержкой
+            withAnimation(.easeOut(duration: 0.6).delay(0.6)) {
+                showNumbers = true
+            }
+            
+            // Анимация кнопки с дополнительной задержкой
+            withAnimation(.easeOut(duration: 0.6).delay(0.9)) {
+                showButton = true
             }
         }
     }

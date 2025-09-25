@@ -2,7 +2,7 @@ import SwiftUI
 
 public struct ConfigurableOnboardingView: View {
     @State private var currentPage = 0
-    @State private var previousPage = 0
+    @State private var isAnimating = false
     private let configuration: OnboardingConfiguration
     private let onComplete: () -> Void
     
@@ -16,24 +16,23 @@ public struct ConfigurableOnboardingView: View {
     
     public var body: some View {
         ZStack {
-            // Рендерим ТОЛЬКО текущий экран без TabView, чтобы исключить свайпы
-            screenView(for: configuration.screens[currentPage], at: currentPage)
-                .id(currentPage)
-                .transition(slideTransition)
-                .ignoresSafeArea(.all, edges: .all)
+            Color.appBackground.ignoresSafeArea()
             
-            // Индикатор прогресса
-            if configuration.showProgressIndicator {
-                VStack {
-                    ProgressIndicatorView(
-                        currentPage: currentPage,
-                        totalPages: configuration.screens.count
-                    )
-                    Spacer()
+            ZStack {
+                ForEach(0..<configuration.screens.count, id: \.self) { index in
+                    if index == currentPage {
+                        screenView(for: configuration.screens[index], at: index)
+                            .transition(
+                                .asymmetric(
+                                    insertion: .move(edge: .trailing),
+                                    removal: .move(edge: .leading)
+                                )
+                            )
+                    }
                 }
             }
+            .animation(.spring(response: 0.6, dampingFraction: 0.8), value: currentPage)
         }
-        .animation(.easeInOut(duration: 0.35), value: currentPage)
         .onAppear {
             UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
         }
@@ -43,364 +42,184 @@ public struct ConfigurableOnboardingView: View {
     private func screenView(for screenType: OnboardingScreenType, at index: Int) -> some View {
         let isLastScreen = index == configuration.screens.count - 1
         
-        switch screenType {
-        case .start:
-            OnboardingStartView {
-                navigateToNext()
-            }
-            
-        case .second:
-            OnboardingSecondView {
-                if isLastScreen {
-                    onComplete()
-                } else {
+        Group {
+            switch screenType {
+            case .start:
+                OnboardingStartView {
                     navigateToNext()
                 }
-            }
-            
-        case .third:
-            OnboardingThirdView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .second:
+                OnboardingSecondView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .fourth:
-            OnboardingFourthView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .third:
+                OnboardingThirdView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .five:
-            OnboardingFiveView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .fourth:
+                OnboardingFourthView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .six:
-            OnboardingSixView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .five:
+                OnboardingFiveView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .seven:
-            OnboardingSevenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .six:
+                OnboardingSixView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .eight:
-            OnboardingEightView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .seven:
+                OnboardingSevenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .nine:
-            OnboardingNineView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .eight:
+                OnboardingEightView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .ten:
-            OnboardingTenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .nine:
+                OnboardingNineView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .eleven:
-            OnboardingElevenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .ten:
+                OnboardingTenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .twelve:
-            OnboardingTwelveView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .eleven:
+                OnboardingElevenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .thirteen:
-            OnboardingThirteenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .twelve:
+                OnboardingTwelveView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .fourteen:
-            OnboardingFourteenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .thirteen:
+                OnboardingThirteenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .fifteen:
-            OnboardingFifteenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .fourteen:
+                OnboardingFourteenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .sixteen:
-            OnboardingSixteenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .fifteen:
+                OnboardingFifteenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .seventeen:
-            OnboardingSeventeenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .sixteen:
+                OnboardingSixteenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .eighteen:
-            OnboardingEighteenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .seventeen:
+                OnboardingSeventeenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .nineteen:
-            OnboardingNineteenView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .eighteen:
+                OnboardingEighteenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .twenty:
-            OnboardingTwentyView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .nineteen:
+                OnboardingNineteenView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .twentyOne:
-            OnboardingTwentyOneView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .twenty:
+                OnboardingTwentyView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .twentyTwo:
-            OnboardingTwentyTwoView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .twentyOne:
+                OnboardingTwentyOneView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .twentyThree:
-            OnboardingTwentyThreeView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .twentyTwo:
+                OnboardingTwentyTwoView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .twentyFour:
-            OnboardingTwentyFourView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .twentyThree:
+                OnboardingTwentyThreeView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .twentyFive:
-            OnboardingTwentyFiveView {
-                onComplete()
-            }
-            
-        case .assignment:
-            OnboardingAssignmentView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .twentyFour:
+                OnboardingTwentyFourView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .paywall:
-            OnboardingPaywall {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .twentyFive:
+                OnboardingTwentyFiveView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-            
-        case .angry:
-            ZStack {
-                AngryEmoji()
-                continueOverlay(isLastScreen: isLastScreen)
-            }
-
-        case .loading:
-            ZStack {
-                LoadingView()
-                continueOverlay(isLastScreen: isLastScreen)
-            }
-
-        case .rateOurApp:
-            ZStack {
-                RateOurAppView()
-                continueOverlay(isLastScreen: isLastScreen)
-            }
-
-        case .reviewView:
-            ZStack {
-                ReviewView()
-                continueOverlay(isLastScreen: isLastScreen)
-            }
-
-        case .rewiring:
-            ZStack {
-                RewiringBenefits()
-                continueOverlay(isLastScreen: isLastScreen)
-            }
-
-        case .rewriting:
-            ZStack {
-                RewritingView()
-                continueOverlay(isLastScreen: isLastScreen)
-            }
-
-        case .videoOnboarding:
-            ZStack {
-                VideoOnbView()
-                continueOverlay(isLastScreen: isLastScreen)
-            }
-
-        case .firstVideo:
-            FirstVideoView {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
+            case .assignment:
+                OnboardingAssignmentView {
+                    handleCompletion(isLastScreen: isLastScreen)
                 }
-            }
-
-        case .zvonochek:
-            ZStack {
-                ZvonochekOnbView()
-                continueOverlay(isLastScreen: isLastScreen)
+            case .paywall:
+                OnboardingPaywall {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .angry:
+                AngryEmoji {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .loading:
+                LoadingView(onComplete: {
+                    navigateToNext()
+                })
+            case .rateOurApp:
+                RateOurAppView {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .reviewView:
+                ReviewView {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .rewiring:
+                RewiringBenefits {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .rewriting:
+                RewritingView {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .videoOnboarding:
+                VideoOnbView {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .zvonochek:
+                ZvonochekOnbView {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .firstVideoView:
+                FirstVideoView {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .secondVideoView:
+                SecondVideoView {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .thirdVideoView:
+                ThirdVideoView {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
+            case .fourthVideoView:
+                FourthVideoView {
+                    handleCompletion(isLastScreen: isLastScreen)
+                }
             }
         }
+        .id(index)
     }
     
-    @ViewBuilder
-    private func continueOverlay(isLastScreen: Bool) -> some View {
-        VStack {
-            Spacer()
-            Button {
-                if isLastScreen {
-                    onComplete()
-                } else {
-                    navigateToNext()
-                }
-            } label: {
-                Text("Continue")
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
+    private func handleCompletion(isLastScreen: Bool) {
+        if isLastScreen {
+            withAnimation(.easeInOut(duration: 0.4)) {
+                onComplete()
             }
-            .buttonStyle(PrimaryButtonStyle())
-            .padding(.horizontal, 16)
+        } else {
+            navigateToNext()
         }
-        .ignoresSafeArea()
     }
     
     private func navigateToNext() {
-        withAnimation(.easeInOut(duration: 0.3)) {
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
             if currentPage < configuration.screens.count - 1 {
-                previousPage = currentPage
                 currentPage += 1
             }
         }
-    }
-}
-
-// MARK: - Slide transition depending on direction
-private extension ConfigurableOnboardingView {
-    var slideTransition: AnyTransition {
-        if currentPage >= previousPage {
-            return .asymmetric(
-                insertion: .move(edge: .trailing).combined(with: .opacity),
-                removal: .move(edge: .leading).combined(with: .opacity)
-            )
-        } else {
-            return .asymmetric(
-                insertion: .move(edge: .leading).combined(with: .opacity),
-                removal: .move(edge: .trailing).combined(with: .opacity)
-            )
-        }
-    }
-}
-
-// MARK: - Progress Indicator View
-struct ProgressIndicatorView: View {
-    let currentPage: Int
-    let totalPages: Int
-    
-    var body: some View {
-        HStack(spacing: 8) {
-            ForEach(0..<totalPages, id: \.self) { index in
-                Circle()
-                    .fill(index <= currentPage ? Color.white : Color.white.opacity(0.3))
-                    .frame(width: 8, height: 8)
-                    .animation(.easeInOut(duration: 0.3), value: currentPage)
-            }
-        }
-        .padding(.horizontal, 20)
-        .padding(.top, 50)
     }
 }

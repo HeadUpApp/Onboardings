@@ -20,7 +20,7 @@ public struct OnboardingView: View {
                 .tag(0)
                 
                 // Экран 2
-                OnboardingSecondView{ withAnimation(.easeInOut(duration: 0.3)) {
+                OnboardingSecondView { withAnimation(.easeInOut(duration: 0.3)) {
                     currentPage = 2
                 }}
                 .tag(1)
@@ -224,8 +224,6 @@ public struct OnboardingView: View {
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .ignoresSafeArea(.all, edges: .all)
-            // Блокируем свайпы: переход только по кнопкам
-            .modifier(DisableSwipeModifier(isDisabled: true))
 
         }
         .onAppear {

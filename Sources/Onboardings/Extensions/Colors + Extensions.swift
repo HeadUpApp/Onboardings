@@ -9,8 +9,8 @@ extension Color {
     static var grayBackground: Color {
         Color(red: 167/255, green: 167/255, blue: 167/255) // #A7A7A7
     }
+    static let appPoloska = Color(hex: "171717")
     
-    // Новые цвета
     static var darkGray: Color {
         Color(red: 48/255, green: 46/255, blue: 50/255) // #302e32
     }
@@ -37,6 +37,69 @@ enum AppGradient {
         static let dark = Color(red: 89/255, green: 10/255, blue: 198/255)    // #590AC6
     }
     
+    static let lightScam = LinearGradient(
+        gradient: Gradient(colors: [
+            Color(red: 165/255, green: 99/255, blue: 238/255, opacity: 0),
+            Color(red: 165/255, green: 99/255, blue: 238/255, opacity: 0.03),
+            Color(red: 165/255, green: 99/255, blue: 238/255, opacity: 0.15)
+        ]),
+        startPoint: .top,
+        endPoint: .bottom
+    )
+    
+    static let darkScrim = LinearGradient(
+        gradient: Gradient(colors: [
+            Color(red: 11/255, green: 11/255, blue: 11/255, opacity: 0),
+            Color(red: 11/255, green: 11/255, blue: 11/255, opacity: 1)
+        ]),
+        startPoint: .top,
+        endPoint: .bottom
+    )
+    static let redTransparentGradient = LinearGradient(
+            gradient: Gradient(colors: [
+                Color(red: 238/255, green: 25/255, blue: 72/255).opacity(0.15),    // rgba(238, 25, 72, 0.15)
+                Color(red: 250/255, green: 13/255, blue: 64/255).opacity(0.12),    // rgba(250, 13, 64, 0.12)
+                Color(red: 250/255, green: 13/255, blue: 64/255).opacity(0.03)     // rgba(250, 13, 64, 0.03)
+            ]),
+            startPoint: UnitPoint.bottom,
+            endPoint: UnitPoint.top
+        )
+        
+        // Градиент затемнения поверх фона (снизу вверх)
+        static let darkOverlayGradient = LinearGradient(
+            gradient: Gradient(colors: [
+                Color(red: 11/255, green: 11/255, blue: 11/255),                   // #0B0B0B
+                Color.black.opacity(0.7),
+                Color.black.opacity(0.8),
+                Color.black
+            ]),
+            startPoint: UnitPoint.bottom,
+            endPoint: UnitPoint.top
+        )
+        
+    
+        // Яркий красный градиент под углом
+        static let brightRedGradient = LinearGradient(
+            gradient: Gradient(colors: [
+                Color(red: 246/255, green: 194/255, blue: 195/255),                // #F6C2C3
+                Color(red: 246/255, green: 71/255, blue: 73/255),                  // #F64749
+                Color(red: 206/255, green: 21/255, blue: 24/255)                   // #CE1518
+            ]),
+            startPoint: UnitPoint(x: 0.0, y: 1.0), // bottomLeading (119.81deg)
+            endPoint: UnitPoint(x: 1.0, y: 0.0)    // topTrailing
+        )
+        
+        // Альтернативная версия темного оверлея (если нужен именно тот сложный градиент)
+        static let complexDarkOverlay = LinearGradient(
+            gradient: Gradient(stops: [
+                .init(color: Color.black.opacity(0.0), location: 0.0),
+                .init(color: Color.black.opacity(0.7), location: 0.5032),
+                .init(color: Color.black.opacity(0.8), location: 0.7478),
+                .init(color: Color.black, location: 1.0)
+            ]),
+            startPoint: UnitPoint.bottom,
+            endPoint: UnitPoint.top
+        )
     static var buttonSimple: LinearGradient {
         LinearGradient(
             gradient: Gradient(colors: [ButtonColors.mid, ButtonColors.dark]),
@@ -235,5 +298,31 @@ extension LinearGradient {
                 }
                 .blendMode(.overlay)
             )
+    }
+}
+
+extension Color {
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (255, 0, 0, 0)
+        }
+        self.init(
+            .sRGB,
+            red: Double(r) / 255,
+            green: Double(g) / 255,
+            blue: Double(b) / 255,
+            opacity: Double(a) / 255
+        )
     }
 }

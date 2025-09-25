@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 public struct OnboardingFourthView: View {
@@ -11,7 +10,7 @@ public struct OnboardingFourthView: View {
     @State private var selectedAge: Int? = nil
     
     private let ages = Array(1...100)
-    private let itemHeight: CGFloat = 58.0
+    private let itemHeight: CGFloat = 45.0 // Уменьшено с 58.0
     
     
     public var body: some View {
@@ -31,7 +30,6 @@ public struct OnboardingFourthView: View {
                         .padding(.leading, 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Spacer()
-                    // Кастомный пикер с линиями
                     ZStack {
                         // Линия сверху
                         VStack {
@@ -50,10 +48,10 @@ public struct OnboardingFourthView: View {
                         }
                         .frame(height: itemHeight)
                         
-                        AgePicker(selectedIndex: $selectedAge, items: ages)
-                            .frame(height: itemHeight * 7)
+                        AgePicker(selectedIndex: $selectedAge, items: ages, itemHeight: itemHeight)
+                            .frame(height: itemHeight * 5) // Уменьшено с 7
                     }
-                    .frame(height: itemHeight * 5)
+                    .frame(height: itemHeight * 3) // Уменьшено с 5
                     
                     Spacer()
                     Button {
@@ -76,9 +74,9 @@ public struct OnboardingFourthView: View {
 public struct AgePicker: View {
     @Binding var selectedIndex: Int?
     public var items: [Int]
-    public var itemHeight: CGFloat = 58.0
+    public var itemHeight: CGFloat = 45.0 // Уменьшено с 58.0
     
-    public init(selectedIndex: Binding<Int?>, items: [Int], itemHeight: CGFloat = 58.0) {
+    public init(selectedIndex: Binding<Int?>, items: [Int], itemHeight: CGFloat = 45.0) {
         self._selectedIndex = selectedIndex
         self.items = items
         self.itemHeight = itemHeight
@@ -95,7 +93,7 @@ public struct AgePicker: View {
                         let backgroundView: some View = {
                             if isSelected {
                                 return AnyView(
-                                    RoundedRectangle(cornerRadius: 8)
+                                    RoundedRectangle(cornerRadius: 6) // Уменьшено с 8
                                         .fill(Color.clear)
                                 )
                             } else {
@@ -103,14 +101,19 @@ public struct AgePicker: View {
                             }
                         }()
                         
-                        Text("\(age)")
-                            .font(.title2)
-                            .fontWeight(isSelected ? .bold : .regular)
-                            .foregroundColor(isSelected ? .white : .white.opacity(0.6))
-                            .frame(height: itemHeight)
-                            .frame(maxWidth: .infinity)
-                            .background(backgroundView)
-                            .id(index)
+                        HStack(spacing: 2) { // Уменьшено с 4
+                            Text("\(age)")
+                                .font(.system(size: isSelected ? 20 : 18)) // Настроены размеры
+                                .fontWeight(isSelected ? .bold : .regular)
+                            Text("yrs")
+                                .font(.system(size: isSelected ? 16 : 14)) // Настроены размеры
+                                .fontWeight(isSelected ? .bold : .regular)
+                        }
+                        .foregroundColor(isSelected ? .white : .white.opacity(0.6))
+                        .frame(height: itemHeight)
+                        .frame(maxWidth: .infinity)
+                        .background(backgroundView)
+                        .id(index)
                     }
                 }
                 .scrollTargetLayout()
@@ -124,8 +127,8 @@ public struct AgePicker: View {
                     gradient: Gradient(
                         stops: [
                             .init(color: .clear, location: 0),
-                            .init(color: .black, location: 0.35),
-                            .init(color: .black, location: 0.65),
+                            .init(color: .black, location: 0.3), // Настроены границы
+                            .init(color: .black, location: 0.7), // Настроены границы
                             .init(color: .clear, location: 1)
                         ]
                     ),
@@ -136,4 +139,3 @@ public struct AgePicker: View {
         }
     }
 }
-

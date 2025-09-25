@@ -6,6 +6,15 @@ public struct CustomButton: View {
     let action: () -> Void
     let height: CGFloat
     let width: CGFloat
+    let isSelected: Bool
+    
+    public init(title: String, action: @escaping () -> Void, height: CGFloat, width: CGFloat, isSelected: Bool = false) {
+        self.title = title
+        self.action = action
+        self.height = height
+        self.width = width
+        self.isSelected = isSelected
+    }
     
     public var body: some View {
         Button(action: action) {
@@ -15,9 +24,12 @@ public struct CustomButton: View {
                 .frame(maxWidth: width, maxHeight: height)
                 .background(
                     RoundedRectangle(cornerRadius: 56)
-                        .fill(Color.white.opacity(0.05))
+                        .fill(isSelected ? Color.white.opacity(0.5) : Color.white.opacity(0.05))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 56)
+                        .stroke(isSelected ? Color.white.opacity(0.5) : Color.clear, lineWidth: 2)
                 )
         }
     }
 }
-

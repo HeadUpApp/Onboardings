@@ -36,8 +36,11 @@ public enum OnboardingScreenType: CaseIterable, Identifiable, Sendable, Equatabl
     case rewiring
     case rewriting
     case videoOnboarding
-    case firstVideo
     case zvonochek
+    case firstVideoView
+    case thirdVideoView
+    case secondVideoView
+    case fourthVideoView
     
     public var id: String { rawValue }
     
@@ -70,15 +73,18 @@ public enum OnboardingScreenType: CaseIterable, Identifiable, Sendable, Equatabl
         case .twentyFive: return "Twenty-Fifth Screen"
         case .assignment: return "Assignment Screen"
         case .paywall: return "Paywall Screen"
-            case .angry: return "Angry Screen"
-            case .loading: return "Loading Screen"
-            case .rateOurApp: return "Rate Our App Screen"
-            case .reviewView: return "Review Screen"
-            case .rewiring: return "Rewiring Screen"
-            case .rewriting: return "Rewriting Screen"
+        case .angry: return "Angry Screen"
+        case .loading: return "Loading Screen"
+        case .rateOurApp: return "Rate Our App Screen"
+        case .reviewView: return "Review Screen"
+        case .rewiring: return "Rewiring Screen"
+        case .rewriting: return "Rewriting Screen"
         case .videoOnboarding: return "Video Onboarding Screen"
-        case .firstVideo: return "First Video Screen"
         case .zvonochek: return "Zvonochek Screen"
+        case .firstVideoView: return "FirstVideoView"
+        case .thirdVideoView: return "ThirdVideoView"
+        case .secondVideoView: return "SecondVideoView"
+        case .fourthVideoView: return "FourthVideoView"
         }
     }
     
@@ -111,15 +117,18 @@ public enum OnboardingScreenType: CaseIterable, Identifiable, Sendable, Equatabl
         case .twentyFive: return "twentyFive"
         case .assignment: return "assignment"
         case .paywall: return "paywall"
-            case .angry: return "angry"
-            case .loading: return "loading"
-            case .rateOurApp: return "rateOurApp"
-            case .reviewView: return "reviewView"
-            case .rewiring: return "rewiring"
-            case .rewriting: return "rewriting"
+        case .angry: return "angry"
+        case .loading: return "loading"
+        case .rateOurApp: return "rateOurApp"
+        case .reviewView: return "reviewView"
+        case .rewiring: return "rewiring"
+        case .rewriting: return "rewriting"
         case .videoOnboarding: return "videoOnboarding"
-        case .firstVideo: return "firstVideo"
         case .zvonochek: return "zvonochek"
+        case .firstVideoView: return "FirstVideoView"
+        case .thirdVideoView: return "ThirdVideoView"
+        case .secondVideoView: return "SecondVideoView"
+        case .fourthVideoView: return "FourthVideoView"
         }
     }
 }
@@ -161,23 +170,15 @@ public struct OnboardingConfiguration: Sendable, Equatable {
             .six, .seven, .eight, .nine, .ten
         ])
     }()
-
-    /// Только новые экраны (Assignments + Video)
-    public static let newScreensOnly: OnboardingConfiguration = {
+    
+    public static let stand: OnboardingConfiguration = {
         OnboardingConfiguration(screens: [
-            .assignment,
-            .firstVideo,
-            .angry,
-            .loading,
-            .rateOurApp,
-            .reviewView,
-            .rewiring,
-            .rewriting,
-            .videoOnboarding,
-            .zvonochek
+            .firstVideoView, .secondVideoView,
+            .thirdVideoView,
+            .start, .second, .third, .fourth, .loading, .five,
+            .six, .seven, .nine, .ten, .twelve, .thirteen, .fourteen, .fifteen, .sixteen, .seventeen, .loading, .eighteen, .nineteen, .twenty, .twentyOne, .angry, .twentyTwo, .twentyThree, .twentyFour, .twentyFive, .rateOurApp, .assignment, .rewriting, .videoOnboarding, .zvonochek, .paywall
         ])
     }()
-    
     /// Кастомный онбординг только с определенными экранами
     public static func custom(_ screens: OnboardingScreenType...) -> OnboardingConfiguration {
         OnboardingConfiguration(screens: screens)
