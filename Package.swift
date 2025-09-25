@@ -21,8 +21,7 @@ let package = Package(
             name: "Onboardings",
             dependencies: [],
             resources: [
-                .process("Resources/Assets.xcassets"),
-                .process("Resources/Fonts")
+                .process("Resources")
             ]
         )
     ]

@@ -2,6 +2,7 @@ import SwiftUI
 
 public struct ConfigurableOnboardingView: View {
     @State private var currentPage = 0
+    @State private var previousPage = 0
     private let configuration: OnboardingConfiguration
     private let onComplete: () -> Void
     
@@ -15,15 +16,11 @@ public struct ConfigurableOnboardingView: View {
     
     public var body: some View {
         ZStack {
-            TabView(selection: $currentPage) {
-                ForEach(Array(configuration.screens.enumerated()), id: \.element.id) { index, screenType in
-                    screenView(for: screenType, at: index)
-                        .tag(index)
-                }
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .ignoresSafeArea(.all, edges: .all)
-            .disabled(!configuration.allowSwipeNavigation)
+            // Рендерим ТОЛЬКО текущий экран без TabView, чтобы исключить свайпы
+            screenView(for: configuration.screens[currentPage], at: currentPage)
+                .id(currentPage)
+                .transition(slideTransition)
+                .ignoresSafeArea(.all, edges: .all)
             
             // Индикатор прогресса
             if configuration.showProgressIndicator {
@@ -36,6 +33,7 @@ public struct ConfigurableOnboardingView: View {
                 }
             }
         }
+        .animation(.easeInOut(duration: 0.35), value: currentPage)
         .onAppear {
             UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
         }
@@ -280,14 +278,110 @@ public struct ConfigurableOnboardingView: View {
                     navigateToNext()
                 }
             }
+            
+        case .angry:
+            ZStack {
+                AngryEmoji()
+                continueOverlay(isLastScreen: isLastScreen)
+            }
+
+        case .loading:
+            ZStack {
+                LoadingView()
+                continueOverlay(isLastScreen: isLastScreen)
+            }
+
+        case .rateOurApp:
+            ZStack {
+                RateOurAppView()
+                continueOverlay(isLastScreen: isLastScreen)
+            }
+
+        case .reviewView:
+            ZStack {
+                ReviewView()
+                continueOverlay(isLastScreen: isLastScreen)
+            }
+
+        case .rewiring:
+            ZStack {
+                RewiringBenefits()
+                continueOverlay(isLastScreen: isLastScreen)
+            }
+
+        case .rewriting:
+            ZStack {
+                RewritingView()
+                continueOverlay(isLastScreen: isLastScreen)
+            }
+
+        case .videoOnboarding:
+            ZStack {
+                VideoOnbView()
+                continueOverlay(isLastScreen: isLastScreen)
+            }
+
+        case .firstVideo:
+            FirstVideoView {
+                if isLastScreen {
+                    onComplete()
+                } else {
+                    navigateToNext()
+                }
+            }
+
+        case .zvonochek:
+            ZStack {
+                ZvonochekOnbView()
+                continueOverlay(isLastScreen: isLastScreen)
+            }
         }
+    }
+    
+    @ViewBuilder
+    private func continueOverlay(isLastScreen: Bool) -> some View {
+        VStack {
+            Spacer()
+            Button {
+                if isLastScreen {
+                    onComplete()
+                } else {
+                    navigateToNext()
+                }
+            } label: {
+                Text("Continue")
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(PrimaryButtonStyle())
+            .padding(.horizontal, 16)
+        }
+        .ignoresSafeArea()
     }
     
     private func navigateToNext() {
         withAnimation(.easeInOut(duration: 0.3)) {
             if currentPage < configuration.screens.count - 1 {
+                previousPage = currentPage
                 currentPage += 1
             }
+        }
+    }
+}
+
+// MARK: - Slide transition depending on direction
+private extension ConfigurableOnboardingView {
+    var slideTransition: AnyTransition {
+        if currentPage >= previousPage {
+            return .asymmetric(
+                insertion: .move(edge: .trailing).combined(with: .opacity),
+                removal: .move(edge: .leading).combined(with: .opacity)
+            )
+        } else {
+            return .asymmetric(
+                insertion: .move(edge: .leading).combined(with: .opacity),
+                removal: .move(edge: .trailing).combined(with: .opacity)
+            )
         }
     }
 }

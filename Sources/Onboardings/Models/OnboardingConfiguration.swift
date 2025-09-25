@@ -29,6 +29,15 @@ public enum OnboardingScreenType: CaseIterable, Identifiable, Sendable, Equatabl
     case twentyFive
     case assignment
     case paywall
+    case angry
+    case loading
+    case rateOurApp
+    case reviewView
+    case rewiring
+    case rewriting
+    case videoOnboarding
+    case firstVideo
+    case zvonochek
     
     public var id: String { rawValue }
     
@@ -61,6 +70,15 @@ public enum OnboardingScreenType: CaseIterable, Identifiable, Sendable, Equatabl
         case .twentyFive: return "Twenty-Fifth Screen"
         case .assignment: return "Assignment Screen"
         case .paywall: return "Paywall Screen"
+            case .angry: return "Angry Screen"
+            case .loading: return "Loading Screen"
+            case .rateOurApp: return "Rate Our App Screen"
+            case .reviewView: return "Review Screen"
+            case .rewiring: return "Rewiring Screen"
+            case .rewriting: return "Rewriting Screen"
+        case .videoOnboarding: return "Video Onboarding Screen"
+        case .firstVideo: return "First Video Screen"
+        case .zvonochek: return "Zvonochek Screen"
         }
     }
     
@@ -93,6 +111,15 @@ public enum OnboardingScreenType: CaseIterable, Identifiable, Sendable, Equatabl
         case .twentyFive: return "twentyFive"
         case .assignment: return "assignment"
         case .paywall: return "paywall"
+            case .angry: return "angry"
+            case .loading: return "loading"
+            case .rateOurApp: return "rateOurApp"
+            case .reviewView: return "reviewView"
+            case .rewiring: return "rewiring"
+            case .rewriting: return "rewriting"
+        case .videoOnboarding: return "videoOnboarding"
+        case .firstVideo: return "firstVideo"
+        case .zvonochek: return "zvonochek"
         }
     }
 }
@@ -132,6 +159,22 @@ public struct OnboardingConfiguration: Sendable, Equatable {
         OnboardingConfiguration(screens: [
             .start, .second, .third, .fourth, .five,
             .six, .seven, .eight, .nine, .ten
+        ])
+    }()
+
+    /// Только новые экраны (Assignments + Video)
+    public static let newScreensOnly: OnboardingConfiguration = {
+        OnboardingConfiguration(screens: [
+            .assignment,
+            .firstVideo,
+            .angry,
+            .loading,
+            .rateOurApp,
+            .reviewView,
+            .rewiring,
+            .rewriting,
+            .videoOnboarding,
+            .zvonochek
         ])
     }()
     

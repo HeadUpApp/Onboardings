@@ -224,6 +224,8 @@ public struct OnboardingView: View {
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .ignoresSafeArea(.all, edges: .all)
+            // Блокируем свайпы: переход только по кнопкам
+            .modifier(DisableSwipeModifier(isDisabled: true))
 
         }
         .onAppear {
