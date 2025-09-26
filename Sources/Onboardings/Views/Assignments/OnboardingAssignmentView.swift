@@ -157,15 +157,11 @@ public struct OnboardingAssignmentView: View {
                     .gesture(
                         DragGesture(minimumDistance: 0)
                             .onChanged { value in
-                                guard allConditionsConfirmed else { return }
-                                
                                 let point = value.location
                                 currentDrawing.points.append(point)
                                 showTrashButton = false
                             }
                             .onEnded { value in
-                                guard allConditionsConfirmed else { return }
-                                
                                 if !currentDrawing.points.isEmpty {
                                     drawings.append(currentDrawing)
                                     currentDrawing = DrawingPath()
