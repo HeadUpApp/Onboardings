@@ -2,17 +2,11 @@ import SwiftUI
 
 public struct OnboardingFourteenView: View {
     let onNext: () -> Void
-    @State private var selectedWorkSchedule: String? = nil
     
-    private let workScheduleOptions = [
-        "6 hrs a day, 5 days a week",
-        "8 hrs a day, 5 days a week",
-        "8 hrs a day, 3 days a week",
-        "6 hrs a day, 3 days a week",
-        "6 hrs a day, Everyday",
-        "4 hrs a day, Everyday",
-        "Other"
-    ]
+    @State private var selectedHours: Int? = 7 // Индекс для 8 часов (8-1=7)
+    
+    private let hours = Array(1...15)
+    private let itemHeight: CGFloat = 45.0
     
     public init(onNext: @escaping () -> Void) {
         self.onNext = onNext
@@ -22,38 +16,43 @@ public struct OnboardingFourteenView: View {
         GeometryReader { geometry in
             let screenHeight = geometry.size.height
             let screenWidth = geometry.size.width
-            
             ZStack {
                 Color.appBackground.ignoresSafeArea()
                 AppGradient.lightScrim.ignoresSafeArea()
                 
-                VStack {
+                VStack(spacing: 0) {
                     Text("How many hours do\nyou work daily?")
                         .font(.interMedium(size: 36))
-                        .kerning(0.36)
                         .foregroundStyle(Color.white)
                         .multilineTextAlignment(.leading)
                         .padding(.top, 16)
                         .padding(.leading, 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    VStack(spacing: 8) {
-                        ForEach(workScheduleOptions.indices, id: \.self) { index in
-                            CustomButton(
-                                title: workScheduleOptions[index],
-                                action: {
-                                    selectedWorkSchedule = workScheduleOptions[index]
-                                },
-                                height: 64,
-                                width: screenWidth * 0.9,
-                                isSelected: selectedWorkSchedule == workScheduleOptions[index]
-                            )
+                    Spacer()
+                    ZStack {
+                        // Линия сверху
+                        VStack {
+                            Rectangle()
+                                .fill(AppGradient.pickerFadeHorizontal)
+                                .frame(height: 1)
+                                .padding(.horizontal, 10)
+                            
+                            Spacer()
+                            
+                            // Линия снизу
+                            Rectangle()
+                                .fill(AppGradient.pickerFadeHorizontal)
+                                .frame(height: 1)
+                                .padding(.horizontal, 10)
                         }
+                        .frame(height: itemHeight)
+                        
+                        HoursPicker(selectedIndex: $selectedHours, items: hours, itemHeight: itemHeight)
+                            .frame(height: itemHeight * 5)
                     }
-                    .padding(.top, 8)
+                    .frame(height: itemHeight * 3)
                     
                     Spacer()
-                    
                     Button {
                         onNext()
                     } label: {
@@ -62,12 +61,79 @@ public struct OnboardingFourteenView: View {
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(PrimaryButtonStyle())
-                    .opacity(selectedWorkSchedule == nil ? 0.6 : 1.0)
-                    .disabled(selectedWorkSchedule == nil)
                     .padding(.horizontal, screenWidth * 0.04)
                     .padding(.bottom, screenHeight * 0.01)
                 }
             }
+        }
+    }
+}
+
+public struct HoursPicker: View {
+    @Binding var selectedIndex: Int?
+    public var items: [Int]
+    public var itemHeight: CGFloat = 45.0
+    
+    public init(selectedIndex: Binding<Int?>, items: [Int], itemHeight: CGFloat = 45.0) {
+        self._selectedIndex = selectedIndex
+        self.items = items
+        self.itemHeight = itemHeight
+    }
+    
+    public var body: some View {
+        ZStack {
+            ScrollView(.vertical) {
+                LazyVStack(spacing: 0) {
+                    ForEach(0..<items.count, id: \.self) { index in
+                        let hours = items[index]
+                        let isSelected = selectedIndex == index
+                        
+                        let backgroundView: some View = {
+                            if isSelected {
+                                return AnyView(
+                                    RoundedRectangle(cornerRadius: 6)
+                                        .fill(Color.clear)
+                                )
+                            } else {
+                                return AnyView(Color.clear)
+                            }
+                        }()
+                        
+                        HStack(spacing: 2) {
+                            Text("\(hours)")
+                                .font(.system(size: isSelected ? 20 : 18))
+                                .fontWeight(isSelected ? .bold : .regular)
+                            Text("hrs")
+                                .font(.system(size: isSelected ? 16 : 14))
+                                .fontWeight(isSelected ? .bold : .regular)
+                        }
+                        .foregroundColor(isSelected ? .white : .white.opacity(0.6))
+                        .frame(height: itemHeight)
+                        .frame(maxWidth: .infinity)
+                        .background(backgroundView)
+                        .id(index)
+                    }
+                }
+                .scrollTargetLayout()
+            }
+            .scrollPosition(id: $selectedIndex, anchor: .center)
+            .scrollTargetBehavior(.viewAligned)
+            .scrollIndicators(.hidden)
+            .background(Color.clear)
+            .mask(
+                LinearGradient(
+                    gradient: Gradient(
+                        stops: [
+                            .init(color: .clear, location: 0),
+                            .init(color: .black, location: 0.3),
+                            .init(color: .black, location: 0.7),
+                            .init(color: .clear, location: 1)
+                        ]
+                    ),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            )
         }
     }
 }

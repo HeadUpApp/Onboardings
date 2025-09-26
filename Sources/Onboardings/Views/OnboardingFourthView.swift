@@ -7,7 +7,7 @@ public struct OnboardingFourthView: View {
         self.onNext = onNext
     }
     
-    @State private var selectedAge: Int? = nil
+    @State private var selectedAge: Int? = 24 // Индекс для возраста 25 (25-1=24)
     
     private let ages = Array(1...100)
     private let itemHeight: CGFloat = 45.0 // Уменьшено с 58.0
