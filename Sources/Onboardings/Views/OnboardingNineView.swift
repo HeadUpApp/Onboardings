@@ -36,20 +36,20 @@ public struct OnboardingNineView: View {
                     
                     HStack(alignment: .bottom) {
                         VStack(spacing: 0) {
-                            Image("walkingMan")
+                            Image(bundleResource: "walkingMan")
                                 .resizable()
                                 .frame(width: 26, height: isLargeScreen ? screenHeight * 0.373 : isSmallScreen ? screenHeight * 0.35 : screenHeight * 0.38)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image("sleepEmoji")
+                            Image(bundleResource: "sleepEmoji")
                                 .resizable()
                                 .frame(width: 24, height: isLargeScreen ? screenHeight * 0.138 : isSmallScreen ? screenHeight * 0.110 : screenHeight * 0.120)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
                             ZStack {
-                                Image("lines")
+                                Image(bundleResource: "lines")
                                     .resizable()
                                     .frame(width: 14, height: isSmallScreen ? screenHeight * 0.140 : screenHeight * 0.150)
                                     .offset(y: showGraphic ? 0 : 100)
@@ -64,7 +64,7 @@ public struct OnboardingNineView: View {
                             .padding(.bottom, 2)
                         }
                         
-                        Image("nineViewGraphic")
+                        Image(bundleResource: "nineViewGraphic")
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                             .offset(y: showGraphic ? 0 : 100)
@@ -72,7 +72,7 @@ public struct OnboardingNineView: View {
                     }
                     .padding(.top, isLargeScreen ? 50 : 30)
                     
-                    Image("cifry24")
+                    Image(bundleResource: "cifry24")
                         .resizable()
                         .frame(maxWidth: 254, maxHeight: 20)
                         .padding(.leading, 100)

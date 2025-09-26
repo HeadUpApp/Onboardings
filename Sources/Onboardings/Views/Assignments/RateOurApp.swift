@@ -33,7 +33,7 @@ public struct RateOurAppView: View {
                                     .offset(y: showContent ? 0 : -50)
                                     .opacity(showContent ? 1 : 0)
                                 
-                                Image("review")
+                                Image(bundleResource: "review")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 300, height: 128)
@@ -41,7 +41,7 @@ public struct RateOurAppView: View {
                                     .opacity(showContent ? 1 : 0)
                             }
                             
-                            Image("rateOurApp")
+                            Image(bundleResource: "rateOurApp")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(maxWidth: .infinity)
@@ -60,7 +60,7 @@ public struct RateOurAppView: View {
                                 .offset(y: showContent ? 0 : -50)
                                 .opacity(showContent ? 1 : 0)
                             
-                            Image("people")
+                            Image(bundleResource: "people")
                                 .resizable()
                                 .frame(width: 322, height: 68)
                                 .padding(.top, 14)
@@ -78,7 +78,7 @@ public struct RateOurAppView: View {
                         
                         VStack(spacing: 10) {
                             // Первый отзыв
-                            Image("firstman")
+                            Image(bundleResource: "firstman")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
@@ -86,7 +86,7 @@ public struct RateOurAppView: View {
                                 .opacity(showReviewIndices[0] ? 1 : 0)
                             
                             // Второй отзыв
-                            Image("secondgirl")
+                            Image(bundleResource: "secondgirl")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
@@ -94,7 +94,7 @@ public struct RateOurAppView: View {
                                 .opacity(showReviewIndices[1] ? 1 : 0)
                             
                             // Третий отзыв
-                            Image("thirdMan")
+                            Image(bundleResource: "thirdMan")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
@@ -106,7 +106,7 @@ public struct RateOurAppView: View {
 
                 VStack {
                     Spacer()
-                    Image("newShadow")
+                    Image(bundleResource: "newShadow")
                         .resizable()
                         .frame(height: screenHeight * 0.2)
                         .frame(maxWidth: .infinity)

@@ -83,7 +83,7 @@ public struct FourthVideoView: View {
                     .disabled(true)
                     .allowsHitTesting(false)
             } else {
-                Image("videoView")
+                Image(bundleResource: "videoView")
                     .resizable()
                     .scaledToFit()
                     .overlay(

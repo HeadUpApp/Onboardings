@@ -35,7 +35,7 @@ public struct OnboardingThirteenView: View {
                     
                     HStack(alignment: .bottom) {
                         VStack(spacing: 0) {
-                            Image("home")
+                            Image(bundleResource: "home")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.02, maxHeight: isSmallScreen ? screenHeight * 0.04 : screenHeight * 0.06)
@@ -43,7 +43,7 @@ public struct OnboardingThirteenView: View {
                                 .opacity(showGraphic ? 1 : 0)
                         }
                         
-                        Image("thirteenViewGraphic")
+                        Image(bundleResource: "thirteenViewGraphic")
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                             .offset(y: showGraphic ? 0 : 100)
@@ -51,7 +51,7 @@ public struct OnboardingThirteenView: View {
                     }
                     .padding(.top, 23)
                     
-                    Image("cifry18")
+                    Image(bundleResource: "cifry18")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: screenWidth * 0.6)

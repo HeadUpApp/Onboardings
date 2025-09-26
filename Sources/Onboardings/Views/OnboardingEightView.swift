@@ -24,20 +24,20 @@ public struct OnboardingEightView: View {
                 VStack {
                     HStack(alignment: .bottom) {
                         VStack(spacing: 0) {
-                            Image("sleepEmoji")
+                            Image(bundleResource: "sleepEmoji")
                                 .resizable()
                                 .frame(width: 24, height: isLargeScreen ? screenHeight * 0.134 : isSmallScreen ? screenHeight * 0.100 : screenHeight * 0.120)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image("years25")
+                            Image(bundleResource: "years25")
                                 .resizable()
                                 .frame(width: 27, height: isSmallScreen ? screenHeight * 0.140 : screenHeight * 0.150)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                         }
                         
-                        Image("sevenViewGraphic")
+                        Image(bundleResource: "sevenViewGraphic")
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: isSmallScreen ? screenHeight * 0.64 : screenHeight * 0.72)
                             .offset(y: showGraphic ? 0 : 100)
@@ -45,7 +45,7 @@ public struct OnboardingEightView: View {
                     }
                     .padding(.top, isSmallScreen ? screenHeight * 0.24 : screenHeight * 0.2)
                     
-                    Image("cifry24")
+                    Image(bundleResource: "cifry24")
                         .resizable()
                         .frame(maxWidth: 254, maxHeight: 20)
                         .padding(.leading, 100)

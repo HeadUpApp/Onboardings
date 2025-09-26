@@ -36,21 +36,21 @@ public struct OnboardingSixteenView: View {
                     
                     HStack(alignment: .bottom) {
                         VStack(spacing: 0) {
-                            Image("dedushka")
+                            Image(bundleResource: "dedushka")
                                 .resizable()
                                 .frame(width: 30)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: isSmallScreen ? screenHeight * 0.14 : screenHeight * 0.17)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image("programmer")
+                            Image(bundleResource: "programmer")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: isLargeScreen ? screenHeight * 0.14 : screenHeight * 0.11)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image("home")
+                            Image(bundleResource: "home")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: screenHeight * 0.06)
@@ -58,7 +58,7 @@ public struct OnboardingSixteenView: View {
                                 .opacity(showGraphic ? 1 : 0)
                         }
                         
-                        Image("sixteenViewGraphic")
+                        Image(bundleResource: "sixteenViewGraphic")
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                             .offset(y: showGraphic ? 0 : 100)
@@ -66,7 +66,7 @@ public struct OnboardingSixteenView: View {
                     }
                     .padding(.top, 23)
                     
-                    Image("cifry18")
+                    Image(bundleResource: "cifry18")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: screenWidth * 0.6)

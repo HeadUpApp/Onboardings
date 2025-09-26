@@ -101,7 +101,7 @@ public struct FirstVideoView: View {
                     .disabled(true)
                     .allowsHitTesting(false)
             } else {
-                Image("videoView")
+                Image(bundleResource: "videoView")
                     .resizable()
                     .scaledToFit()
                     .overlay(

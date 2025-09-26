@@ -128,7 +128,7 @@ public struct OnboardingAssignmentView: View {
                                     Button {
                                         clearSignature()
                                     } label: {
-                                        Image("trash")
+                                        Image(bundleResource: "trash")
                                             .resizable()
                                             .frame(width: 40, height: 40)
                                             .padding(16)

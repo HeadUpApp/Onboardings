@@ -35,35 +35,35 @@ public struct OnboardingTwentyView: View {
                     
                     HStack(alignment: .bottom){
                         VStack(spacing: 0) {
-                            Image("rainbow")
+                            Image(bundleResource: "rainbow")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: screenHeight * 0.14)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image("shadowSmartphone")
+                            Image(bundleResource: "shadowSmartphone")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: screenHeight * 0.18)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image("shadowDedushka")
+                            Image(bundleResource: "shadowDedushka")
                                 .resizable()
                                 .frame(width: 32)
                                 .frame(minHeight: screenHeight * 0.03, maxHeight: screenHeight * 0.22)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image("shadowProgrammer")
+                            Image(bundleResource: "shadowProgrammer")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: screenHeight * 0.11)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image("shadowHome")
+                            Image(bundleResource: "shadowHome")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: screenHeight * 0.06)
@@ -71,7 +71,7 @@ public struct OnboardingTwentyView: View {
                                 .opacity(showGraphic ? 1 : 0)
                         }
                         
-                        Image("twentyViewGraphic")
+                        Image(bundleResource: "twentyViewGraphic")
                             .resizable()
                             .frame(minWidth: screenWidth * 0.60, maxWidth: screenWidth * 0.80)
                             .frame(minHeight: screenHeight * 0.40, maxHeight: screenHeight * 0.80)
@@ -80,7 +80,7 @@ public struct OnboardingTwentyView: View {
                     }
                     .padding(.top, 23)
                     
-                    Image("cifry18")
+                    Image(bundleResource: "cifry18")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: screenWidth * 0.6)

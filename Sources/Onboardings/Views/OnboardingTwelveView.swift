@@ -34,7 +34,7 @@ public struct OnboardingTwelveView: View {
                     
                     HStack(alignment: .bottom) {
                         VStack(spacing: 0) {
-                            Image("walkingMan")
+                            Image(bundleResource: "walkingMan")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.40, maxHeight: screenHeight * 0.72)
@@ -42,7 +42,7 @@ public struct OnboardingTwelveView: View {
                                 .opacity(showGraphic ? 1 : 0)
                         }
                         
-                        Image("twelveViewGraphic")
+                        Image(bundleResource: "twelveViewGraphic")
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                             .offset(y: showGraphic ? 0 : 100)
@@ -50,7 +50,7 @@ public struct OnboardingTwelveView: View {
                     }
                     .padding(.top, 23)
                     
-                    Image("cifry18")
+                    Image(bundleResource: "cifry18")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: screenWidth * 0.6)

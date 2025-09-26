@@ -102,7 +102,7 @@ public struct SecondVideoView: View {
                     .disabled(true)
                     .allowsHitTesting(false)
             } else {
-                Image("videoView")
+                Image(bundleResource: "videoView")
                     .resizable()
                     .scaledToFit()
                     .overlay(

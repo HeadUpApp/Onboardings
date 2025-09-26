@@ -50,7 +50,7 @@ public struct OnboardingThirdView: View {
                     .offset(y: showContent ? 0 : -screenHeight * 0.1)
                     .opacity(showContent ? 1 : 0)
                     
-                    Image("thirdViewGraphic")
+                    Image(bundleResource: "thirdViewGraphic")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: .infinity)
