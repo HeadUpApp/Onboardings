@@ -38,11 +38,41 @@ Image(bundleResource: "videoView")
 ```
 
 ### Использование views из библиотеки
+
+#### Простое использование
 ```swift
 OnboardingStartView {
     print("Onboarding completed!")
 }
 ```
+
+#### Полный пример с сохранением состояния
+```swift
+import SwiftUI
+import Onboardings
+
+struct ContentView: View {
+    @AppStorage("onboardingCompleted") private var onboardingCompleted = false
+    
+    var body: some View {
+        if !onboardingCompleted {
+            ConfigurableOnboardingView(
+                configuration: OnboardingConfiguration.stand,
+                onComplete: {
+                    onboardingCompleted = true
+                }
+            )
+        } else {
+            // Ваше основное приложение
+            MainAppView()
+        }
+    }
+}
+```
+
+#### Важно для персистентности!
+- Используйте `@AppStorage` или `UserDefaults` для сохранения состояния онбординга
+- Без этого онбординг будет показываться при каждом запуске приложения
 
 ## Важные изменения
 
