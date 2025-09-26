@@ -15,6 +15,7 @@ public struct OnboardingAssignmentView: View {
     @State public var isFirstConfirmed = false
     @State public var isSecondConfirmed = false
     @State public var isThirdConfirmed = false
+    @State public var showErrorMessage = false
     
     public var body: some View {
         GeometryReader { geometry in
@@ -43,6 +44,9 @@ public struct OnboardingAssignmentView: View {
                         HStack(spacing: 10) {
                             Button {
                                 isFirstConfirmed.toggle()
+                                if allConditionsConfirmed {
+                                    showErrorMessage = false
+                                }
                             } label: {
                                 Image(isFirstConfirmed ? .confirm : .notReady)
                                     .resizable()
@@ -58,6 +62,9 @@ public struct OnboardingAssignmentView: View {
                         HStack(spacing: 10) {
                             Button {
                                 isSecondConfirmed.toggle()
+                                if allConditionsConfirmed {
+                                    showErrorMessage = false
+                                }
                             } label: {
                                 Image(isSecondConfirmed ? .confirm : .notReady)
                                     .resizable()
@@ -73,6 +80,9 @@ public struct OnboardingAssignmentView: View {
                         HStack(spacing: 10) {
                             Button {
                                 isThirdConfirmed.toggle()
+                                if allConditionsConfirmed {
+                                    showErrorMessage = false
+                                }
                             } label: {
                                 Image(isThirdConfirmed ? .confirm : .notReady)
                                     .resizable()
@@ -167,8 +177,20 @@ public struct OnboardingAssignmentView: View {
                     .padding(.horizontal, 16)
                     .padding(.bottom, 24)
                     
+                    if showErrorMessage && !allConditionsConfirmed {
+                        Text("Please select all items before signing.")
+                            .font(.interMedium(size: 14))
+                            .foregroundStyle(.red)
+                            .padding(.horizontal, 16)
+                            .padding(.bottom, 8)
+                    }
+                    
                     Button {
-                        onNext()
+                        if allConditionsConfirmed && !drawings.isEmpty {
+                            onNext()
+                        } else {
+                            showErrorMessage = true
+                        }
                     } label: {
                         Text("Sign")
                             .foregroundStyle(.white)
