@@ -23,14 +23,14 @@ public struct OnboardingSecondView: View {
                     Color.appBackground.ignoresSafeArea()
                     AppGradient.simpleBackground.frame(height: screenHeight * 0.87)
                     
-                    Image(.moon)
+                    Image("moon")
                         .resizable()
                         .scaledToFill()
                         .frame(maxWidth: .infinity)
                         .frame(maxHeight: isSmallScreen ? screenHeight * 0.38 : screenHeight * 0.28, alignment: .bottom)
                         .padding(.top, isSmallScreen ? screenHeight * 0.26 : screenHeight * 0.3)
                     
-                    Image(.hand)
+                    Image("hand")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: .infinity)
@@ -38,7 +38,7 @@ public struct OnboardingSecondView: View {
                     
                     VStack {
                         Spacer()
-                        Image(.blackGradient)
+                        Image("blackGradient")
                             .resizable()
                             .frame(height: screenHeight * 0.42)
                             .frame(maxWidth: .infinity)

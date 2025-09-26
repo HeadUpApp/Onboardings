@@ -19,7 +19,7 @@ public struct OnboardingStartView: View {
                 Color.appBackground.ignoresSafeArea()
                 
                 // Фоновое изображение
-                Image(.hand)
+                Image("hand")
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
@@ -28,7 +28,7 @@ public struct OnboardingStartView: View {
                 // Градиентный оверлей
                 VStack {
                     Spacer()
-                    Image(.blackGradient)
+                    Image("blackGradient")
                         .resizable()
                         .frame(height: screenHeight * 0.42)
                         .frame(maxWidth: .infinity)

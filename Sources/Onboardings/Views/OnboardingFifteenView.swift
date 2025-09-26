@@ -36,14 +36,14 @@ public struct OnboardingFifteenView: View {
                     
                     HStack(alignment: .bottom) {
                         VStack(spacing: 0) {
-                            Image(.programmer)
+                            Image("programmer")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: isLargeScreen ? screenHeight * 0.10 : screenHeight * 0.09)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image(.home)
+                            Image("home")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.02, maxHeight: isSmallScreen ? screenHeight * 0.04 : screenHeight * 0.06)
@@ -51,7 +51,7 @@ public struct OnboardingFifteenView: View {
                                 .opacity(showGraphic ? 1 : 0)
                         }
                         
-                        Image(.fifteenViewGraphic)
+                        Image("fifteenViewGraphic")
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                             .offset(y: showGraphic ? 0 : 100)
@@ -59,7 +59,7 @@ public struct OnboardingFifteenView: View {
                     }
                     .padding(.top, 23)
                     
-                    Image(.cifry18)
+                    Image("cifry18")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: screenWidth * 0.6)

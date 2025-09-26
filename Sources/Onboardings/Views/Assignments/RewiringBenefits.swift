@@ -25,28 +25,28 @@ public struct RewiringBenefits: View {
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity, alignment: .center)
                         
-                        Image(.review)
+                        Image("review")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 400, height: 128)
                             .padding(.top, 33)
                         
                         VStack(spacing: 10) {
-                            Image(.firstman)
+                            Image("firstman")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
                                 .offset(y: showReviewIndices[0] ? 0 : -100)
                                 .opacity(showReviewIndices[0] ? 1 : 0)
 
-                            Image(.secondgirl)
+                            Image("secondgirl")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
                                 .offset(y: showReviewIndices[1] ? 0 : -100)
                                 .opacity(showReviewIndices[1] ? 1 : 0)
 
-                            Image(.thirdMan)
+                            Image("thirdMan")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
@@ -59,7 +59,7 @@ public struct RewiringBenefits: View {
 
                 VStack {
                     Spacer()
-                    Image(.newShadow)
+                    Image("newShadow")
                         .resizable()
                         .frame(height: screenHeight * 0.2)
                         .frame(maxWidth: .infinity)

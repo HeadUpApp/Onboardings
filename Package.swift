@@ -7,9 +7,7 @@ let package = Package(
     name: "Onboardings",
     platforms: [
         .iOS(.v17),
-        .macOS(.v10_15),
     ],
-    version: "1.0.3",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(

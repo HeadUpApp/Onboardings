@@ -29,7 +29,7 @@ public struct OnboardingPaywall: View {
                                 Button {
                                     onNext()
                                 } label: {
-                                    Image(.closeButton)
+                                    Image("closeButton")
                                         .resizable()
                                         .frame(width: 24, height: 24)
                                 }
@@ -37,7 +37,7 @@ public struct OnboardingPaywall: View {
                             .padding(.horizontal, 16)
                             .padding(.bottom, screenHeight * 0.3)
                             
-                            Image(.beforeAfter)
+                            Image("beforeAfter")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(maxWidth: .infinity)
@@ -53,7 +53,7 @@ public struct OnboardingPaywall: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.top, 38)
                         ZStack(alignment: .leading) {
-                            Image(.palka)
+                            Image("palka")
                                 .resizable()
                                 .frame(width: 4, height: 160)
                                 .padding(.leading, 52)
@@ -61,7 +61,7 @@ public struct OnboardingPaywall: View {
                             VStack(alignment: .leading, spacing: 22) {
                                 
                                 HStack(alignment: .top, spacing: 20) {
-                                    Image(.galochka)
+                                    Image("galochka")
                                         .resizable()
                                         .frame(width: 40, height: 40)
                                     
@@ -76,7 +76,7 @@ public struct OnboardingPaywall: View {
                                 }
 
                                 HStack(alignment: .top, spacing: 20) {
-                                    Image(.zvonochek)
+                                    Image("zvonochek")
                                         .resizable()
                                         .frame(width: 40, height: 40)
                                     
@@ -92,7 +92,7 @@ public struct OnboardingPaywall: View {
                                 }
 
                                 HStack(alignment: .top, spacing: 20) {
-                                    Image(.paywallZvezda)
+                                    Image("paywallZvezda")
                                         .resizable()
                                         .frame(width: 40, height: 40)
                                     
@@ -116,7 +116,7 @@ public struct OnboardingPaywall: View {
                             HStack(spacing: 12) {
                                 HStack(spacing: 4) {
                                     ForEach(0..<5, id: \.self) { _ in
-                                        Image(.star)
+                                        Image("star")
                                             .resizable()
                                             .frame(width: 13, height: 13)
                                     }
@@ -158,7 +158,7 @@ public struct OnboardingPaywall: View {
                         .padding(.horizontal, 20)
                         
                         HStack(spacing: 8) {
-                            Image(.okay)
+                            Image("okay")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                             Text("No payment due now")

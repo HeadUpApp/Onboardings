@@ -24,7 +24,7 @@ public struct ZvonochekOnbView: View {
                 AppGradient.lightScrim.ignoresSafeArea()
 
                 // Основной колокол
-                Image(.kolokol)
+                Image("kolokol")
                     .resizable()
                     .frame(width: screenWidth * 0.8, height: screenHeight * 0.5)
                     .padding(.bottom, 120)
@@ -44,7 +44,7 @@ public struct ZvonochekOnbView: View {
                             )
                     }
                     
-                    Image(.zvonok)
+                    Image("zvonok")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .offset(
@@ -58,7 +58,7 @@ public struct ZvonochekOnbView: View {
                 VStack {
                     Spacer()
                     ZStack(alignment: .bottom) {
-                        Image(.behindOfKolokol)
+                        Image("behindOfKolokol")
                             .resizable()
                             .frame(height: screenHeight * 0.6)
                             .frame(maxWidth: .infinity)
@@ -83,7 +83,7 @@ public struct ZvonochekOnbView: View {
                     
                     VStack(spacing: 16) {
                         HStack {
-                            Image(.confirm)
+                            Image("confirm")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                             Text("No payment due now")

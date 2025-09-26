@@ -36,28 +36,28 @@ public struct OnboardingNineteenView: View {
                     
                     HStack(alignment: .bottom) {
                         VStack(spacing: 0) {
-                            Image(.smartphone)
+                            Image("smartphone")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: isLargeScreen ? screenHeight * 0.16 : isSmallScreen ? screenHeight * 0.11 : screenHeight * 0.13)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image(.dedushka)
+                            Image("dedushka")
                                 .resizable()
                                 .frame(width: 30)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: isSmallScreen ? screenHeight * 0.14 : screenHeight * 0.17)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image(.programmer)
+                            Image("programmer")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: screenHeight * 0.11)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                             
-                            Image(.home)
+                            Image("home")
                                 .resizable()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: screenHeight * 0.06)
@@ -65,7 +65,7 @@ public struct OnboardingNineteenView: View {
                                 .opacity(showGraphic ? 1 : 0)
                         }
                         
-                        Image(.nineteenViewGraphic)
+                        Image("nineteenViewGraphic")
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                             .offset(y: showGraphic ? 0 : 100)
@@ -73,7 +73,7 @@ public struct OnboardingNineteenView: View {
                     }
                     .padding(.top, 23)
                     
-                    Image(.cifry18)
+                    Image("cifry18")
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: screenWidth * 0.6)

@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 public struct ConfigurableOnboardingView: View {
     @State private var currentPage = 0

@@ -33,14 +33,14 @@ public struct OnboardingTenView: View {
                     
                     HStack(alignment: .bottom) {
                         VStack(spacing: 0) {
-                            Image(.walkingMan)
+                            Image("walkingMan")
                                 .resizable()
                                 .frame(maxWidth: 26, maxHeight: screenHeight * 0.39)
                                 .offset(y: showGraphic ? 0 : 100)
                                 .opacity(showGraphic ? 1 : 0)
                         }
                         
-                        Image(.tenViewGraphic)
+                        Image("tenViewGraphic")
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.39)
                             .offset(y: showGraphic ? 0 : 100)

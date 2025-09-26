@@ -16,7 +16,7 @@ public struct OnboardingTwentyFiveView: View {
             ZStack(alignment: .topLeading) {
                 Color.appBackground.ignoresSafeArea()
                 
-                Image(.screen26)
+                Image("screen26")
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
@@ -25,7 +25,7 @@ public struct OnboardingTwentyFiveView: View {
                 
                 VStack {
                     Spacer()
-                    Image(.blackGradient)
+                    Image("blackGradient")
                         .resizable()
                         .frame(height: screenHeight * 0.42)
                         .frame(maxWidth: .infinity)

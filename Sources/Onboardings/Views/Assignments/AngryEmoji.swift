@@ -11,7 +11,7 @@ public struct AngryEmoji: View {
     
     public var body: some View {
         ZStack {
-            Image(.backgroundMoln)
+            Image("backgroundMoln")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
@@ -39,7 +39,7 @@ public struct AngryEmoji: View {
             
             
             VStack(spacing:0) {
-                Image(.angryEmoji)
+                Image("angryEmoji")
                     .resizable()
                     .scaledToFill()
                     .frame(maxWidth: 356, maxHeight: 306)

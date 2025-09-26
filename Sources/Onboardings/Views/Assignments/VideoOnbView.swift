@@ -15,7 +15,7 @@ public struct VideoOnbView: View {
                 Color.appBackground.ignoresSafeArea()
                 AppGradient.lightScam.ignoresSafeArea()
                 
-                Image(.videoView)
+                Image("videoView")
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
@@ -43,7 +43,7 @@ public struct VideoOnbView: View {
 
                     VStack(spacing: 16) {
                         HStack {
-                            Image(.confirm)
+                            Image("confirm")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                             Text("No payment due now")

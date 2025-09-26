@@ -46,7 +46,7 @@ public struct OnboardingFiveView: View {
                     // График с изображениями
                     HStack(alignment: .bottom) {
                         ZStack {
-                            Image(.lines)
+                            Image("lines")
                                 .resizable()
                                 .frame(width: 14, height: isSmallScreen ? screenHeight * 0.140 : screenHeight * 0.150)
                                 .offset(y: showGraphic ? 0 : 100)
@@ -60,7 +60,7 @@ public struct OnboardingFiveView: View {
                         }
                         .padding(.bottom, 22)
                         
-                        Image(.fiveViewGraphic)
+                        Image("fiveViewGraphic")
                             .resizable()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: isSmallScreen ? screenHeight * 0.64 : screenHeight * 0.72)
                             .offset(y: showGraphic ? 0 : 100)

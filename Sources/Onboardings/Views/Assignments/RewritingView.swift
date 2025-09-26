@@ -27,7 +27,7 @@ public struct RewritingView: View {
                     
                     VStack(spacing: 10) {
                         // Первый отзыв
-                        Image(.firstman)
+                        Image("firstman")
                             .resizable()
                             .scaledToFit()
                             .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
@@ -35,7 +35,7 @@ public struct RewritingView: View {
                             .opacity(showReviewIndices[0] ? 1 : 0)
                         
                         // Второй отзыв
-                        Image(.secondgirl)
+                        Image("secondgirl")
                             .resizable()
                             .scaledToFit()
                             .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
@@ -43,7 +43,7 @@ public struct RewritingView: View {
                             .opacity(showReviewIndices[1] ? 1 : 0)
                         
                         // Третий отзыв
-                        Image(.thirdMan)
+                        Image("thirdMan")
                             .resizable()
                             .scaledToFit()
                             .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
@@ -54,7 +54,7 @@ public struct RewritingView: View {
 
                 VStack {
                     Spacer()
-                    Image(.newShadow)
+                    Image("newShadow")
                         .resizable()
                         .frame(height: screenHeight * 0.2)
                         .frame(maxWidth: .infinity)
