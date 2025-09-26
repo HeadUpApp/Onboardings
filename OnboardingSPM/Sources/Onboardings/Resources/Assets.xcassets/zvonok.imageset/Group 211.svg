@@ -1,0 +1,35 @@
+<svg width="126" height="126" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dn_869_585)">
+<circle cx="63.0781" cy="60.5693" r="40" fill="url(#paint0_linear_869_585)"/>
+</g>
+<path d="M69.8242 40.2578V81H60.3633L60.3633 49.0625H60.3086L50.9844 54.8867V46.5469L61.0195 40.2578H69.8242Z" fill="white"/>
+<defs>
+<filter id="filter0_dn_869_585" x="0.520193" y="0.517841" width="125.116" height="125.116" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2.50644"/>
+<feGaussianBlur stdDeviation="11.279"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.76 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_869_585"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.99743181467056274 0.99743181467056274" stitchTiles="stitch" numOctaves="3" result="noise" seed="2242" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="rgba(255, 255, 255, 0.2)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect2_noise_869_585">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+<feBlend mode="normal" in="effect2_noise_869_585" in2="effect1_dropShadow_869_585" result="effect2_noise_869_585"/>
+</filter>
+<linearGradient id="paint0_linear_869_585" x1="63.0781" y1="20.5693" x2="63.0781" y2="100.569" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF455D"/>
+<stop offset="1" stop-color="#DC152F"/>
+</linearGradient>
+</defs>
+</svg>
