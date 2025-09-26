@@ -184,7 +184,7 @@ public struct OnboardingAssignmentView: View {
                     Button {
                         if allConditionsConfirmed && !drawings.isEmpty {
                             onNext()
-                        } else {
+                        } else if !allConditionsConfirmed {
                             showErrorMessage = true
                         }
                     } label: {
