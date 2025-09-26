@@ -196,7 +196,6 @@ public struct OnboardingAssignmentView: View {
                     .padding(.horizontal, screenWidth * 0.04)
                     .padding(.top, screenHeight * 0.01)
                     .padding(.bottom, screenHeight * 0.01)
-                    .disabled(!allConditionsConfirmed)
                     .opacity(allConditionsConfirmed ? 1.0 : 0.6)
                 }
             }
