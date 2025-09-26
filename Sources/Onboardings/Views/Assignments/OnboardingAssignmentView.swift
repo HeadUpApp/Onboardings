@@ -173,7 +173,7 @@ public struct OnboardingAssignmentView: View {
                     .padding(.horizontal, 16)
                     .padding(.bottom, 24)
                     
-                    if showErrorMessage && !allConditionsConfirmed {
+                    if showErrorMessage {
                         Text("Please select all items before signing.")
                             .font(.interMedium(size: 14))
                             .foregroundStyle(.red)
