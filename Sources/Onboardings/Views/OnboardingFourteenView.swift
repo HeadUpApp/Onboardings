@@ -3,7 +3,8 @@ import SwiftUI
 public struct OnboardingFourteenView: View {
     let onNext: () -> Void
     
-    @State private var selectedHours: Int? = 7 // Индекс для 8 часов в массиве [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    @State private var selectedHours: Int? = nil
+    @State private var isPickerReady = false
     
     private let hours = Array(1...15)
     private let itemHeight: CGFloat = 45.0
@@ -66,6 +67,13 @@ public struct OnboardingFourteenView: View {
                 }
             }
         }
+        .onAppear {
+            // Устанавливаем значение после небольшой задержки, чтобы избежать лага анимации
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                selectedHours = 7 // Индекс для 8 часов
+                isPickerReady = true
+            }
+        }
     }
 }
 
@@ -118,6 +126,7 @@ public struct HoursPicker: View {
             }
             .scrollPosition(id: $selectedIndex, anchor: .center)
             .scrollTargetBehavior(.viewAligned)
+            .animation(.none, value: selectedIndex)
             .scrollIndicators(.hidden)
             .background(Color.clear)
             .mask(
