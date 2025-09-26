@@ -3,7 +3,7 @@ import SwiftUI
 public struct OnboardingFourteenView: View {
     let onNext: () -> Void
     
-    @State private var selectedHours: Int? = 7 // Индекс для 8 часов (8-1=7)
+    @State private var selectedHours: Int? = 7 // Индекс для 8 часов в массиве [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
     
     private let hours = Array(1...15)
     private let itemHeight: CGFloat = 45.0
