@@ -99,6 +99,7 @@ public struct ZvonochekOnbView: View {
                                 .frame(maxWidth: .infinity)
                         }
                         .buttonStyle(PrimaryButtonStyle())
+                        .padding(.horizontal, 16)
                         
                         Text("Just 99,9 $ per year or 12,99 $ per month")
                             .font(.interMedium(size: 17))
