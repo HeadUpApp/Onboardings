@@ -4,8 +4,6 @@ import SwiftUI
 public struct OnboardingSixView: View {
     let onNext: () -> Void
     @State private var selectedSleepTime: String? = nil
-    @State private var showContent = false
-    @State private var showButtons: [Bool] = Array(repeating: false, count: 6)
     
     // Массив опций для сна
     private let sleepOptions = [
@@ -39,8 +37,6 @@ public struct OnboardingSixView: View {
                         .padding(.top, 16)
                         .padding(.leading, 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .offset(y: showContent ? 0 : -50)
-                        .opacity(showContent ? 1 : 0)
                     
                     VStack(spacing: 8) {
                         ForEach(sleepOptions.indices, id: \.self) { index in
@@ -53,8 +49,6 @@ public struct OnboardingSixView: View {
                                 width: screenWidth * 0.9,
                                 isSelected: selectedSleepTime == sleepOptions[index]
                             )
-                            .offset(y: showButtons[index] ? 0 : 100)
-                            .opacity(showButtons[index] ? 1 : 0)
                         }
                     }
                     .padding(.top, 8)
@@ -73,21 +67,6 @@ public struct OnboardingSixView: View {
                     .disabled(selectedSleepTime == nil)
                     .padding(.horizontal, screenWidth * 0.04)
                     .padding(.bottom, screenHeight * 0.01)
-                    .offset(y: showContent ? 0 : 100)
-                    .opacity(showContent ? 1 : 0)
-                }
-            }
-        }
-        .onAppear {
-            // Анимация заголовка
-            withAnimation(.easeOut(duration: 0.6)) {
-                showContent = true
-            }
-            
-            // Последовательная анимация кнопок с задержкой
-            for index in sleepOptions.indices {
-                withAnimation(.easeOut(duration: 0.6).delay(0.2 + Double(index) * 0.1)) {
-                    showButtons[index] = true
                 }
             }
         }

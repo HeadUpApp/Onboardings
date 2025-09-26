@@ -2,8 +2,6 @@ import SwiftUI
 
 public struct OnboardingThirdView: View {
     let onNext: () -> Void
-    @State private var showContent = false
-    @State private var showGraphic = false
     
     public init(onNext: @escaping () -> Void) {
         self.onNext = onNext
@@ -47,8 +45,6 @@ public struct OnboardingThirdView: View {
                     .padding(.top, 16)
                     .padding(.leading, 16)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .offset(y: showContent ? 0 : -screenHeight * 0.1)
-                    .opacity(showContent ? 1 : 0)
                     
                     Image(bundleResource: "thirdViewGraphic")
                         .resizable()
@@ -58,8 +54,6 @@ public struct OnboardingThirdView: View {
                         .padding(.horizontal, screenWidth * 0.03)
                         .padding(.bottom, 12)
                         .padding(.top, screenHeight * 0.02)
-                        .offset(y: showGraphic ? 0 : 100)
-                        .opacity(showGraphic ? 1 : 0)
                     
                     Button {
                         onNext()
@@ -71,20 +65,7 @@ public struct OnboardingThirdView: View {
                     .buttonStyle(PrimaryButtonStyle())
                     .padding(.horizontal, screenWidth * 0.04)
                     .padding(.bottom, screenHeight * 0.01)
-                    .offset(y: showGraphic ? 0 : 50)
-                    .opacity(showGraphic ? 1 : 0)
                 }
-            }
-        }
-        .onAppear {
-            // Анимация текста сверху вниз
-            withAnimation(.easeOut(duration: 0.6)) {
-                showContent = true
-            }
-            
-            // Анимация графика с задержкой
-            withAnimation(.easeOut(duration: 0.6).delay(0.3)) {
-                showGraphic = true
             }
         }
     }

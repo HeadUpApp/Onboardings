@@ -3,8 +3,6 @@ import SwiftUI
 public struct OnboardingFourteenView: View {
     let onNext: () -> Void
     @State private var selectedWorkSchedule: String? = nil
-    @State private var showContent = false
-    @State private var showButtons: [Bool] = Array(repeating: false, count: 7)
     
     private let workScheduleOptions = [
         "6 hrs a day, 5 days a week",
@@ -38,8 +36,6 @@ public struct OnboardingFourteenView: View {
                         .padding(.top, 16)
                         .padding(.leading, 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .offset(y: showContent ? 0 : -50)
-                        .opacity(showContent ? 1 : 0)
                     
                     VStack(spacing: 8) {
                         ForEach(workScheduleOptions.indices, id: \.self) { index in
@@ -52,8 +48,6 @@ public struct OnboardingFourteenView: View {
                                 width: screenWidth * 0.9,
                                 isSelected: selectedWorkSchedule == workScheduleOptions[index]
                             )
-                            .offset(y: showButtons[index] ? 0 : 100)
-                            .opacity(showButtons[index] ? 1 : 0)
                         }
                     }
                     .padding(.top, 8)
@@ -72,19 +66,6 @@ public struct OnboardingFourteenView: View {
                     .disabled(selectedWorkSchedule == nil)
                     .padding(.horizontal, screenWidth * 0.04)
                     .padding(.bottom, screenHeight * 0.01)
-                    .offset(y: showContent ? 0 : 100)
-                    .opacity(showContent ? 1 : 0)
-                }
-            }
-        }
-        .onAppear {
-            withAnimation(.easeOut(duration: 0.6)) {
-                showContent = true
-            }
-
-            for index in workScheduleOptions.indices {
-                withAnimation(.easeOut(duration: 0.6).delay(0.2 + Double(index) * 0.1)) {
-                    showButtons[index] = true
                 }
             }
         }

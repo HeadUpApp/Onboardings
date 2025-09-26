@@ -12,24 +12,12 @@
 
 /* Begin PBXFileReference section */
 		776F392B2E8024CE00440361 /* OnboardingSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardingSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7791B76F2E86E25800070F91 /* OnboardingSPM.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = OnboardingSPM.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		776F393D2E80257500440361 /* Exceptions for "OnboardingSPM" folder in "OnboardingSPM" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Onboardings,
-			);
-			target = 776F392A2E8024CE00440361 /* OnboardingSPM */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		776F392D2E8024CE00440361 /* OnboardingSPM */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				776F393D2E80257500440361 /* Exceptions for "OnboardingSPM" folder in "OnboardingSPM" target */,
-			);
 			path = OnboardingSPM;
 			sourceTree = "<group>";
 		};
@@ -69,6 +57,13 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7791B7742E86E25900070F91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +122,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 776F392C2E8024CE00440361 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7791B7742E86E25900070F91 /* Products */;
+					ProjectRef = 7791B76F2E86E25800070F91 /* OnboardingSPM.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				776F392A2E8024CE00440361 /* OnboardingSPM */,

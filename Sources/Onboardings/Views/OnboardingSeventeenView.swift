@@ -3,8 +3,6 @@ import SwiftUI
 public struct OnboardingSeventeenView: View {
     let onNext: () -> Void
     @State private var selectedScreenTime: String? = nil
-    @State private var showContent = false
-    @State private var showButtons: [Bool] = Array(repeating: false, count: 6)
     
     private let screenTimeOptions = [
         "Less than 1 hours",
@@ -37,8 +35,6 @@ public struct OnboardingSeventeenView: View {
                         .padding(.top, 16)
                         .padding(.leading, 16)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .offset(y: showContent ? 0 : -50)
-                        .opacity(showContent ? 1 : 0)
                     
                     VStack(spacing: 8) {
                         ForEach(screenTimeOptions.indices, id: \.self) { index in
@@ -51,8 +47,6 @@ public struct OnboardingSeventeenView: View {
                                 width: screenWidth * 0.9,
                                 isSelected: selectedScreenTime == screenTimeOptions[index]
                             )
-                            .offset(y: showButtons[index] ? 0 : 100)
-                            .opacity(showButtons[index] ? 1 : 0)
                         }
                     }
                     .padding(.top, 8)
@@ -72,19 +66,6 @@ public struct OnboardingSeventeenView: View {
                     .frame(width: screenWidth * 0.92)
                     .padding(.horizontal, screenWidth * 0.04)
                     .padding(.bottom, screenHeight * 0.02)
-                    .offset(y: showContent ? 0 : 100)
-                    .opacity(showContent ? 1 : 0)
-                }
-            }
-        }
-        .onAppear {
-            withAnimation(.easeOut(duration: 0.6)) {
-                showContent = true
-            }
-
-            for index in screenTimeOptions.indices {
-                withAnimation(.easeOut(duration: 0.6).delay(0.2 + Double(index) * 0.1)) {
-                    showButtons[index] = true
                 }
             }
         }
