@@ -38,14 +38,10 @@ public struct OnboardingSevenView: View {
                                 Image(bundleResource: "lines")
                                     .resizable()
                                     .frame(width: 14, height: isSmallScreen ? screenHeight * 0.140 : screenHeight * 0.150)
-                                    .offset(y: showGraphic ? 0 : 100)
-                                    .opacity(showGraphic ? 1 : 0)
                                 
                                 Text("your\nage")
                                     .font(.interMedium(size: 12))
                                     .foregroundStyle(Color.white)
-                                    .offset(y: showGraphic ? 0 : 100)
-                                    .opacity(showGraphic ? 1 : 0)
                             }
                         }
                         
