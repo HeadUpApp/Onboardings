@@ -1,0 +1,305 @@
+{
+  "": {
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/master.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Extensions/Colors + Extensions.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Colors + Extensions.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Colors + Extensions.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Colors + Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Colors + Extensions.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Extensions/Font+Extensions.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Font+Extensions.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Font+Extensions.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Font+Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Font+Extensions.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Models/OnboardingConfiguration.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingConfiguration.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingConfiguration.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingConfiguration~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingConfiguration.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Models/OnboardingPage.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingPage.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingPage.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingPage~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingPage.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Onboardings.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Onboardings.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Onboardings.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Onboardings~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/Onboardings.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/SubViews/CustomButton.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/CustomButton.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/CustomButton.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/CustomButton~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/CustomButton.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/SubViews/DisableSwipeModifier.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/DisableSwipeModifier.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/DisableSwipeModifier.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/DisableSwipeModifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/DisableSwipeModifier.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Assignments/AngryEmoji.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/AngryEmoji.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/AngryEmoji.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/AngryEmoji~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/AngryEmoji.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Assignments/LoadingView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/LoadingView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/LoadingView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/LoadingView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/LoadingView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Assignments/OnboardingAssignmentView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingAssignmentView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingAssignmentView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingAssignmentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingAssignmentView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Assignments/RateOurApp.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RateOurApp.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RateOurApp.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RateOurApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RateOurApp.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Assignments/ReviewView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ReviewView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ReviewView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ReviewView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ReviewView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Assignments/RewiringBenefits.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RewiringBenefits.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RewiringBenefits.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RewiringBenefits~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RewiringBenefits.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Assignments/RewritingView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RewritingView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RewritingView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RewritingView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/RewritingView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Assignments/VideoOnbView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/VideoOnbView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/VideoOnbView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/VideoOnbView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/VideoOnbView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Assignments/ZvonochekOnbView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ZvonochekOnbView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ZvonochekOnbView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ZvonochekOnbView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ZvonochekOnbView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/ConfigurableOnboardingView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ConfigurableOnboardingView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ConfigurableOnboardingView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ConfigurableOnboardingView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ConfigurableOnboardingView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/EscapeTheRoleView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/EscapeTheRoleView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/EscapeTheRoleView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/EscapeTheRoleView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/EscapeTheRoleView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingEightView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingEightView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingEightView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingEightView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingEightView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingEighteenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingEighteenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingEighteenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingEighteenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingEighteenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingElevenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingElevenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingElevenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingElevenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingElevenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingFifteenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFifteenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFifteenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFifteenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFifteenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingFiveView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFiveView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFiveView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFiveView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFiveView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingFourteenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFourteenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFourteenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFourteenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFourteenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingFourthView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFourthView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFourthView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFourthView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingFourthView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingNineView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingNineView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingNineView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingNineView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingNineView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingNineteenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingNineteenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingNineteenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingNineteenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingNineteenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingPaywall.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingPaywall.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingPaywall.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingPaywall~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingPaywall.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingSecondView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSecondView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSecondView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSecondView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSecondView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingSevenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSevenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSevenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSevenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSevenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingSeventeenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSeventeenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSeventeenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSeventeenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSeventeenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingSixView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSixView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSixView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSixView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSixView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingSixteenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSixteenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSixteenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSixteenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingSixteenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingStartView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingStartView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingStartView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingStartView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingStartView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingTenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingThirdView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingThirdView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingThirdView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingThirdView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingThirdView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingThirteenView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingThirteenView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingThirteenView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingThirteenView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingThirteenView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingTwelveView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwelveView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwelveView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwelveView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwelveView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingTwentyFiveView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyFiveView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyFiveView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyFiveView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyFiveView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingTwentyFourView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyFourView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyFourView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyFourView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyFourView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingTwentyOneView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyOneView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyOneView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyOneView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyOneView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingTwentyThreeView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyThreeView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyThreeView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyThreeView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyThreeView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingTwentyTwoView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyTwoView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyTwoView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyTwoView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyTwoView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingTwentyView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingTwentyView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/OnboardingView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/OnboardingView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Video/FirstVideoView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/FirstVideoView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/FirstVideoView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/FirstVideoView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/FirstVideoView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Video/FourthVideoView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/FourthVideoView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/FourthVideoView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/FourthVideoView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/FourthVideoView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Video/SecondVideoView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/SecondVideoView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/SecondVideoView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/SecondVideoView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/SecondVideoView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/Sources/Onboardings/Views/Video/ThirdVideoView.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ThirdVideoView.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ThirdVideoView.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ThirdVideoView~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/ThirdVideoView.swiftdeps"
+  },
+  "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/resource_bundle_accessor.d",
+    "object": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/glebklyga/Desktop/SPMOnboarding/OnboardingSPM/.build/arm64-apple-macosx/debug/Onboardings.build/resource_bundle_accessor.swiftdeps"
+  }
+}
