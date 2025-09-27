@@ -48,7 +48,7 @@ public struct OnboardingAssignmentView: View {
                                     showErrorMessage = false
                                 }
                             } label: {
-                                Image(isFirstConfirmed ? .confirm : .notReady)
+                                Image(isFirstConfirmed ? "confirm" : "notReady", bundle: .module)
                                     .resizable()
                                     .frame(width: 20, height: 20)
                             }
@@ -66,7 +66,7 @@ public struct OnboardingAssignmentView: View {
                                     showErrorMessage = false
                                 }
                             } label: {
-                                Image(isSecondConfirmed ? .confirm : .notReady)
+                                Image(isSecondConfirmed ? "confirm" : "notReady", bundle: .module)
                                     .resizable()
                                     .frame(width: 20, height: 20)
                             }
@@ -84,7 +84,7 @@ public struct OnboardingAssignmentView: View {
                                     showErrorMessage = false
                                 }
                             } label: {
-                                Image(isThirdConfirmed ? .confirm : .notReady)
+                                Image(isThirdConfirmed ? "confirm" : "notReady", bundle: .module)
                                     .resizable()
                                     .frame(width: 20, height: 20)
                             }
@@ -100,7 +100,7 @@ public struct OnboardingAssignmentView: View {
                     
                     ZStack {
                         Color.darkPurple
-                        Canvas { context, size in
+                        Canvas { context, _ in
                             for drawing in drawings {
                                 var path = Path()
                                 if let firstPoint = drawing.points.first {
@@ -161,7 +161,7 @@ public struct OnboardingAssignmentView: View {
                                 currentDrawing.points.append(point)
                                 showTrashButton = false
                             }
-                            .onEnded { value in
+                            .onEnded { _ in
                                 if !currentDrawing.points.isEmpty {
                                     drawings.append(currentDrawing)
                                     currentDrawing = DrawingPath()

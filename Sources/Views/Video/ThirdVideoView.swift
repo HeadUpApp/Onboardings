@@ -2,7 +2,8 @@
 import SwiftUI
 import AVKit
 
-public struct FirstVideoView: View {
+
+public struct ThirdVideoView: View {
     let onNext: () -> Void
     @State private var player: AVPlayer?
     
@@ -19,6 +20,7 @@ public struct FirstVideoView: View {
                 Color.appBackground.ignoresSafeArea()
                 AppGradient.lightScam.ignoresSafeArea()
            
+
                 VStack {
                     Spacer()
                     AppGradient.darkScrim
@@ -36,25 +38,24 @@ public struct FirstVideoView: View {
                         )
                         .clipped()
                         .padding(.top, 24)
-                    Text("Control your scrolling")
+                    Text("Pomodoro mode")
                         .font(.interMedium(size: 34))
                         .kerning(0.36)
                         .foregroundStyle(Color.white)
                         .multilineTextAlignment(.center)
                         .padding(.leading, 16)
                         .padding(.top, 30)
-                    Text("HeadUp helps you stop unconscious scrolling\nin social media apps, so you stay focused and\npresent.")
+                    Text("HeadUp blocks all distracting apps during\nyour short focus sessions.")
                         .font(.interMedium(size: 16))
                         .kerning(0.36)
                         .foregroundStyle(Color.white.opacity(0.5))
                         .multilineTextAlignment(.center)
                         .padding(.top, 2)
-      
-                   
+                    
                     HStack(spacing: 8) {
                         // Первая точка - белая (активная)
                         Circle()
-                            .fill(Color.white)
+                            .fill(Color.white.opacity(0.3))
                             .frame(width: 8, height: 8)
                         
                         // Вторая точка - серая
@@ -64,12 +65,11 @@ public struct FirstVideoView: View {
                         
                         // Третья точка - серая
                         Circle()
-                            .fill(Color.white.opacity(0.3))
+                            .fill(Color.white)
                             .frame(width: 8, height: 8)
                     }
                     .padding(.top, 20)
                     .padding(.bottom, 20)
-                    
                     VStack {
                         Button {
                             onNext()
@@ -117,7 +117,7 @@ public struct FirstVideoView: View {
         guard let videoURL = getVideoURLFromSPM() else {
             print("Video not found in SPM resources")
             // Fallback: попробуем загрузить из main bundle (если видео в проекте)
-            if let fallbackURL = Bundle.main.url(forResource: "ThirdVideo", withExtension: "mp4") {
+            if let fallbackURL = Bundle.main.url(forResource: "FourthVideo", withExtension: "mp4") {
                 setupPlayer(with: fallbackURL)
             }
             return
@@ -127,26 +127,7 @@ public struct FirstVideoView: View {
     }
     
     private func getVideoURLFromSPM() -> URL? {
-        // 1. Пробуем получить bundle модуля SPM
-        let moduleName = "Onboardings"
-        
-        // Все возможные имена bundle для SPM
-        let possibleBundleNames = [
-            "\(moduleName)_\(moduleName)",
-            "\(moduleName)",
-            "Onboardings_Onboardings"
-        ]
-        
-        for bundleName in possibleBundleNames {
-            if let bundlePath = Bundle.main.path(forResource: bundleName, ofType: "bundle"),
-               let bundle = Bundle(path: bundlePath),
-               let url = bundle.url(forResource: "ThirdVideo", withExtension: "mp4") {
-                print("Found video in SPM bundle: \(bundleName)")
-                return url
-            }
-        }
-        
-        return nil
+        Bundle.module.url(forResource: "FourthVideo", withExtension: "mp4")
     }
     
     private func setupPlayer(with url: URL) {
@@ -170,7 +151,6 @@ public struct FirstVideoView: View {
         player = newPlayer
         player?.play()
     }
-    
 }
 
 private class BundleFinder {}

@@ -13,3 +13,7 @@ public struct Onboardings {
         ConfigurableOnboardingView(configuration: configuration, onComplete: onComplete)
     }
 }
+
+#Preview {
+    Onboardings.createConfigurableOnboardingView(configuration: .stand) {}
+}

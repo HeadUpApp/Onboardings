@@ -2,8 +2,7 @@
 import SwiftUI
 import AVKit
 
-
-public struct ThirdVideoView: View {
+public struct FourthVideoView: View {
     let onNext: () -> Void
     @State private var player: AVPlayer?
     
@@ -30,46 +29,29 @@ public struct ThirdVideoView: View {
                 .ignoresSafeArea()
                 
                 VStack {
-                    videoPlayer
-                        .aspectRatio(16/9, contentMode: .fill)
-                        .frame(
-                            width: screenWidth * 0.52,
-                            height: screenHeight * 0.6
-                        )
-                        .clipped()
-                        .padding(.top, 24)
-                    Text("Pomodoro mode")
+                    textContent
                         .font(.interMedium(size: 34))
                         .kerning(0.36)
                         .foregroundStyle(Color.white)
                         .multilineTextAlignment(.center)
-                        .padding(.leading, 16)
-                        .padding(.top, 30)
-                    Text("HeadUp blocks all distracting apps during\nyour short focus sessions.")
-                        .font(.interMedium(size: 16))
+                       
+                    Text("HeadUp lets you block distracting apps at\nchosen times, so you can fully focus\non work or study")
+                        .font(.interMedium(size: 17))
                         .kerning(0.36)
                         .foregroundStyle(Color.white.opacity(0.5))
                         .multilineTextAlignment(.center)
-                        .padding(.top, 2)
+                        .padding(.top, 12)
                     
-                    HStack(spacing: 8) {
-                        // Первая точка - белая (активная)
-                        Circle()
-                            .fill(Color.white.opacity(0.3))
-                            .frame(width: 8, height: 8)
+                    videoPlayer
+                        .aspectRatio(16/9, contentMode: .fill)
+                        .frame(
+                            width: screenWidth * 0.64,
+                            height: screenHeight * 0.6
+                        )
+                        .clipped()
+                        .padding(.top, 20)
                         
-                        // Вторая точка - серая
-                        Circle()
-                            .fill(Color.white.opacity(0.3))
-                            .frame(width: 8, height: 8)
-                        
-                        // Третья точка - серая
-                        Circle()
-                            .fill(Color.white)
-                            .frame(width: 8, height: 8)
-                    }
-                    .padding(.top, 20)
-                    .padding(.bottom, 20)
+                    Spacer()
                     VStack {
                         Button {
                             onNext()
@@ -81,7 +63,7 @@ public struct ThirdVideoView: View {
                         .buttonStyle(PrimaryButtonStyle())
                     }
                     .padding(.horizontal, 16)
-                    .padding(.bottom, 14)
+                    .padding(.bottom, 24)
                 }
             }
         }
@@ -117,7 +99,7 @@ public struct ThirdVideoView: View {
         guard let videoURL = getVideoURLFromSPM() else {
             print("Video not found in SPM resources")
             // Fallback: попробуем загрузить из main bundle (если видео в проекте)
-            if let fallbackURL = Bundle.main.url(forResource: "FourthVideo", withExtension: "mp4") {
+            if let fallbackURL = Bundle.main.url(forResource: "FirstVideo", withExtension: "mp4") {
                 setupPlayer(with: fallbackURL)
             }
             return
@@ -127,26 +109,7 @@ public struct ThirdVideoView: View {
     }
     
     private func getVideoURLFromSPM() -> URL? {
-        // 1. Пробуем получить bundle модуля SPM
-        let moduleName = "Onboardings"
-        
-        // Все возможные имена bundle для SPM
-        let possibleBundleNames = [
-            "\(moduleName)_\(moduleName)",
-            "\(moduleName)",
-            "Onboardings_Onboardings"
-        ]
-        
-        for bundleName in possibleBundleNames {
-            if let bundlePath = Bundle.main.path(forResource: bundleName, ofType: "bundle"),
-               let bundle = Bundle(path: bundlePath),
-               let url = bundle.url(forResource: "FourthVideo", withExtension: "mp4") {
-                print("Found video in SPM bundle: \(bundleName)")
-                return url
-            }
-        }
-        
-        return nil
+        Bundle.module.url(forResource: "FirstVideo", withExtension: "mp4")
     }
     
     private func setupPlayer(with url: URL) {
@@ -169,6 +132,14 @@ public struct ThirdVideoView: View {
         
         player = newPlayer
         player?.play()
+    }
+    
+    private var textContent: Text {
+        let part1 = Text("Block Apps by\n")
+        let part2 = Text("Schedule")
+            .foregroundStyle(AppGradient.textPrimary)
+            .font(.interMedium(size: 34))
+        return part1 + part2
     }
 }
 

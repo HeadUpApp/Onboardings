@@ -1,8 +1,9 @@
 
+
 import SwiftUI
 import AVKit
 
-public struct FourthVideoView: View {
+public struct SecondVideoView: View {
     let onNext: () -> Void
     @State private var player: AVPlayer?
     
@@ -19,7 +20,6 @@ public struct FourthVideoView: View {
                 Color.appBackground.ignoresSafeArea()
                 AppGradient.lightScam.ignoresSafeArea()
            
-
                 VStack {
                     Spacer()
                     AppGradient.darkScrim
@@ -29,29 +29,48 @@ public struct FourthVideoView: View {
                 .ignoresSafeArea()
                 
                 VStack {
-                    textContent
+                    videoPlayer
+                        .aspectRatio(16/9, contentMode: .fill)
+                        .frame(
+                            width: screenWidth * 0.52,
+                            height: screenHeight * 0.6
+                        )
+                        .clipped()
+                        .padding(.top, 24)
+      
+                    Text("Block apps by schedule")
                         .font(.interMedium(size: 34))
                         .kerning(0.36)
                         .foregroundStyle(Color.white)
                         .multilineTextAlignment(.center)
-                       
-                    Text("HeadUp lets you block distracting apps at\nchosen times, so you can fully focus\non work or study")
-                        .font(.interMedium(size: 17))
+                        .padding(.leading, 16)
+                        .padding(.top, 30)
+                   
+                    Text("HeadUp lets you block distracting apps at\nchosen times, so you can fully focus on work\nor study.")
+                        .font(.interMedium(size: 16))
                         .kerning(0.36)
                         .foregroundStyle(Color.white.opacity(0.5))
                         .multilineTextAlignment(.center)
-                        .padding(.top, 12)
+                        .padding(.top, 2)
                     
-                    videoPlayer
-                        .aspectRatio(16/9, contentMode: .fill)
-                        .frame(
-                            width: screenWidth * 0.64,
-                            height: screenHeight * 0.6
-                        )
-                        .clipped()
-                        .padding(.top, 20)
+                    HStack(spacing: 8) {
+                        // Первая точка - белая (активная)
+                        Circle()
+                            .fill(Color.white.opacity(0.3))
+                            .frame(width: 8, height: 8)
                         
-                    Spacer()
+                        // Вторая точка - серая
+                        Circle()
+                            .fill(Color.white)
+                            .frame(width: 8, height: 8)
+                        
+                        // Третья точка - серая
+                        Circle()
+                            .fill(Color.white.opacity(0.3))
+                            .frame(width: 8, height: 8)
+                    }
+                    .padding(.top, 20)
+                    .padding(.bottom, 20)
                     VStack {
                         Button {
                             onNext()
@@ -63,7 +82,7 @@ public struct FourthVideoView: View {
                         .buttonStyle(PrimaryButtonStyle())
                     }
                     .padding(.horizontal, 16)
-                    .padding(.bottom, 24)
+                    .padding(.bottom, 14)
                 }
             }
         }
@@ -99,7 +118,7 @@ public struct FourthVideoView: View {
         guard let videoURL = getVideoURLFromSPM() else {
             print("Video not found in SPM resources")
             // Fallback: попробуем загрузить из main bundle (если видео в проекте)
-            if let fallbackURL = Bundle.main.url(forResource: "FirstVideo", withExtension: "mp4") {
+            if let fallbackURL = Bundle.main.url(forResource: "SecondVideo", withExtension: "mp4") {
                 setupPlayer(with: fallbackURL)
             }
             return
@@ -109,26 +128,7 @@ public struct FourthVideoView: View {
     }
     
     private func getVideoURLFromSPM() -> URL? {
-        // 1. Пробуем получить bundle модуля SPM
-        let moduleName = "Onboardings"
-        
-        // Все возможные имена bundle для SPM
-        let possibleBundleNames = [
-            "\(moduleName)_\(moduleName)",
-            "\(moduleName)",
-            "Onboardings_Onboardings"
-        ]
-        
-        for bundleName in possibleBundleNames {
-            if let bundlePath = Bundle.main.path(forResource: bundleName, ofType: "bundle"),
-               let bundle = Bundle(path: bundlePath),
-               let url = bundle.url(forResource: "FirstVideo", withExtension: "mp4") {
-                print("Found video in SPM bundle: \(bundleName)")
-                return url
-            }
-        }
-        
-        return nil
+        Bundle.module.url(forResource: "SecondVideo", withExtension: "mp4")
     }
     
     private func setupPlayer(with url: URL) {
@@ -153,13 +153,10 @@ public struct FourthVideoView: View {
         player?.play()
     }
     
-    private var textContent: Text {
-        let part1 = Text("Block Apps by\n")
-        let part2 = Text("Schedule")
-            .foregroundStyle(AppGradient.textPrimary)
-            .font(.interMedium(size: 34))
-        return part1 + part2
-    }
 }
 
 private class BundleFinder {}
+
+
+
+
