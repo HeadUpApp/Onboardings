@@ -29,24 +29,24 @@ public struct RewritingView: View {
                         // Первый отзыв
                         Image(bundleResource: "firstman")
                             .resizable()
-                            .scaledToFit()
-                            .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: screenWidth * 0.9)
                             .offset(y: showReviewIndices[0] ? 0 : -100)
                             .opacity(showReviewIndices[0] ? 1 : 0)
                         
                         // Второй отзыв
                         Image(bundleResource: "secondgirl")
                             .resizable()
-                            .scaledToFit()
-                            .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: screenWidth * 0.9)
                             .offset(y: showReviewIndices[1] ? 0 : -100)
                             .opacity(showReviewIndices[1] ? 1 : 0)
                         
                         // Третий отзыв
                         Image(bundleResource: "thirdMan")
                             .resizable()
-                            .scaledToFit()
-                            .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: screenWidth * 0.9)
                             .offset(y: showReviewIndices[2] ? 0 : -100)
                             .opacity(showReviewIndices[2] ? 1 : 0)
                     }
@@ -93,4 +93,8 @@ public struct RewritingView: View {
             }
         }
     }
+}
+
+#Preview {
+    RewritingView {}
 }

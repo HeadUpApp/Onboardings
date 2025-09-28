@@ -80,6 +80,7 @@ public struct RateOurAppView: View {
                             // Первый отзыв
                             Image(bundleResource: "firstman")
                                 .resizable()
+                                .aspectRatio(contentMode: .fit)
                                 .frame(width: screenWidth * 0.9)
                                 .offset(y: showReviewIndices[0] ? 0 : -100)
                                 .opacity(showReviewIndices[0] ? 1 : 0)
@@ -87,6 +88,7 @@ public struct RateOurAppView: View {
                             // Второй отзыв
                             Image(bundleResource: "secondgirl")
                                 .resizable()
+                                .aspectRatio(contentMode: .fit)
                                 .frame(width: screenWidth * 0.9)
                                 .offset(y: showReviewIndices[1] ? 0 : -100)
                                 .opacity(showReviewIndices[1] ? 1 : 0)
@@ -94,6 +96,7 @@ public struct RateOurAppView: View {
                             // Третий отзыв
                             Image(bundleResource: "thirdMan")
                                 .resizable()
+                                .aspectRatio(contentMode: .fit)
                                 .frame(width: screenWidth * 0.9)
                                 .offset(y: showReviewIndices[2] ? 0 : -100)
                                 .opacity(showReviewIndices[2] ? 1 : 0)
