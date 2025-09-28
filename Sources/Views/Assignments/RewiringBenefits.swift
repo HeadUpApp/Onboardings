@@ -34,22 +34,19 @@ public struct RewiringBenefits: View {
                         VStack(spacing: 10) {
                             Image(bundleResource: "firstman")
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
+                                .frame(width: screenWidth * 0.9)
                                 .offset(y: showReviewIndices[0] ? 0 : -100)
                                 .opacity(showReviewIndices[0] ? 1 : 0)
 
                             Image(bundleResource: "secondgirl")
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
+                                .frame(width: screenWidth * 0.9)
                                 .offset(y: showReviewIndices[1] ? 0 : -100)
                                 .opacity(showReviewIndices[1] ? 1 : 0)
 
                             Image(bundleResource: "thirdMan")
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
+                                .frame(width: screenWidth * 0.9)
                                 .offset(y: showReviewIndices[2] ? 0 : -100)
                                 .opacity(showReviewIndices[2] ? 1 : 0)
                         }
@@ -93,4 +90,8 @@ public struct RewiringBenefits: View {
             }
         }
     }
+}
+
+#Preview {
+    RewiringBenefits {}
 }

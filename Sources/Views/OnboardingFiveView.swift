@@ -51,6 +51,7 @@ public struct OnboardingFiveView: View {
                         
                         Image(bundleResource: "fiveViewGraphic")
                             .resizable()
+                            .scaledToFit()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: isSmallScreen ? screenHeight * 0.64 : screenHeight * 0.72)
                     }
                     .padding(.bottom, 24)

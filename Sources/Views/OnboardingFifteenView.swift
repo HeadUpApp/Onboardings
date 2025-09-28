@@ -43,6 +43,7 @@ public struct OnboardingFifteenView: View {
                         
                         Image(bundleResource: "fifteenViewGraphic")
                             .resizable()
+                            .scaledToFit()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                     }
                     .padding(.top, 23)

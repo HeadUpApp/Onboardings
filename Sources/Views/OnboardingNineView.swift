@@ -32,15 +32,18 @@ public struct OnboardingNineView: View {
                         VStack(spacing: 0) {
                             Image(bundleResource: "walkingMan")
                                 .resizable()
+                                .scaledToFit()
                                 .frame(width: 26, height: isLargeScreen ? screenHeight * 0.373 : isSmallScreen ? screenHeight * 0.35 : screenHeight * 0.38)
                             
                             Image(bundleResource: "sleepEmoji")
                                 .resizable()
+                                .scaledToFit()
                                 .frame(width: 24, height: isLargeScreen ? screenHeight * 0.138 : isSmallScreen ? screenHeight * 0.110 : screenHeight * 0.120)
                             
                             ZStack {
                                 Image(bundleResource: "lines")
                                     .resizable()
+                                    .scaledToFit()
                                     .frame(width: 14, height: isSmallScreen ? screenHeight * 0.140 : screenHeight * 0.150)
                                 
                                 Text("your\nage")
@@ -52,6 +55,7 @@ public struct OnboardingNineView: View {
                         
                         Image(bundleResource: "nineViewGraphic")
                             .resizable()
+                            .scaledToFit()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                     }
                     .padding(.top, isLargeScreen ? 50 : 30)

@@ -32,7 +32,7 @@ public struct OnboardingEighteenView: View {
                         Text("20 years")
                             .font(.interMedium(size: 60))
                             .foregroundStyle(AppGradient.orangeGradientPrecise)
-                        Text("At this rate, screen time will take up about\nthat many years of your life")
+                        Text("This is the time you’ll spend on your phone over your lifetime.")
                             .font(.interMedium(size: 18))
                             .foregroundStyle(Color.gray)
                             .multilineTextAlignment(.center)

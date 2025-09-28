@@ -48,6 +48,7 @@ public struct ThirdVideoView: View {
                     Text("HeadUp blocks all distracting apps during\nyour short focus sessions.")
                         .font(.interMedium(size: 16))
                         .kerning(0.36)
+                        .fixedSize(horizontal: false, vertical: true)
                         .foregroundStyle(Color.white.opacity(0.5))
                         .multilineTextAlignment(.center)
                         .padding(.top, 2)

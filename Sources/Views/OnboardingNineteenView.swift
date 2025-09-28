@@ -32,27 +32,32 @@ public struct OnboardingNineteenView: View {
                         VStack(spacing: 0) {
                             Image(bundleResource: "smartphone")
                                 .resizable()
+                                .scaledToFit()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: isLargeScreen ? screenHeight * 0.16 : isSmallScreen ? screenHeight * 0.11 : screenHeight * 0.13)
                             
                             Image(bundleResource: "dedushka")
                                 .resizable()
+                                .scaledToFit()
                                 .frame(width: 30)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: isSmallScreen ? screenHeight * 0.14 : screenHeight * 0.17)
                             
                             Image(bundleResource: "programmer")
                                 .resizable()
+                                .scaledToFit()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: screenHeight * 0.11)
                             
                             Image(bundleResource: "home")
                                 .resizable()
+                                .scaledToFit()
                                 .frame(width: 34)
                                 .frame(minHeight: screenHeight * 0.04, maxHeight: screenHeight * 0.06)
                         }
                         
                         Image(bundleResource: "nineteenViewGraphic")
                             .resizable()
+                            .scaledToFit()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                     }
                     .padding(.top, 23)

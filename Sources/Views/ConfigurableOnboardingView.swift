@@ -158,7 +158,17 @@ public struct ConfigurableOnboardingView: View {
                     handleCompletion(isLastScreen: isLastScreen)
                 }
             case .loading:
-                LoadingView(onComplete: {
+                LoadingView([
+                    "Count the days…",
+                    "Build a chart by months…"
+                ], onComplete: {
+                    navigateToNext()
+                })
+            case .loading2:
+                LoadingView([
+                    "Estimating lifetime phone usage…",
+                    "Estimating your potential time saved…"
+                ], onComplete: {
                     navigateToNext()
                 })
             case .rateOurApp:

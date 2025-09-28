@@ -31,6 +31,7 @@ public enum OnboardingScreenType: CaseIterable, Identifiable, Sendable, Equatabl
     case paywall
     case angry
     case loading
+    case loading2
     case rateOurApp
     case reviewView
     case rewiring
@@ -74,7 +75,7 @@ public enum OnboardingScreenType: CaseIterable, Identifiable, Sendable, Equatabl
         case .assignment: return "Assignment Screen"
         case .paywall: return "Paywall Screen"
         case .angry: return "Angry Screen"
-        case .loading: return "Loading Screen"
+        case .loading, .loading2: return "Loading Screen"
         case .rateOurApp: return "Rate Our App Screen"
         case .reviewView: return "Review Screen"
         case .rewiring: return "Rewiring Screen"
@@ -118,7 +119,7 @@ public enum OnboardingScreenType: CaseIterable, Identifiable, Sendable, Equatabl
         case .assignment: return "assignment"
         case .paywall: return "paywall"
         case .angry: return "angry"
-        case .loading: return "loading"
+        case .loading, .loading2: return "loading"
         case .rateOurApp: return "rateOurApp"
         case .reviewView: return "reviewView"
         case .rewiring: return "rewiring"
@@ -176,7 +177,7 @@ public struct OnboardingConfiguration: Sendable, Equatable {
             .firstVideoView, .secondVideoView,
             .thirdVideoView,
             .start, .second, .third, .fourth, .loading, .five,
-            .six, .seven, .nine, .ten, .twelve, .thirteen, .fourteen, .fifteen, .sixteen, .seventeen, .loading, .eighteen, .nineteen, .twenty, .twentyOne, .angry, .twentyTwo, .twentyThree, .twentyFour, .twentyFive, .rateOurApp, .assignment, .rewriting, .videoOnboarding, .zvonochek, .paywall
+            .six, .seven, .nine, .ten, .twelve, .thirteen, .fourteen, .fifteen, .sixteen, .seventeen, .loading2, .eighteen, .nineteen, .twenty, .twentyOne, .angry, .twentyTwo, .twentyThree, .twentyFour, .twentyFive, .rateOurApp, .assignment, .rewriting, .videoOnboarding, .zvonochek, .paywall
         ])
     }()
     /// Кастомный онбординг только с определенными экранами

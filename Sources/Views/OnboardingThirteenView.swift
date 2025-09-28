@@ -37,6 +37,7 @@ public struct OnboardingThirteenView: View {
                         
                         Image(bundleResource: "thirteenViewGraphic")
                             .resizable()
+                            .scaledToFit()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: screenHeight * 0.72)
                     }
                     .padding(.top, 23)

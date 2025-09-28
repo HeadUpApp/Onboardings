@@ -39,6 +39,7 @@ public struct FirstVideoView: View {
                     Text("Control your scrolling")
                         .font(.interMedium(size: 34))
                         .kerning(0.36)
+                        .fixedSize(horizontal: false, vertical: true)
                         .foregroundStyle(Color.white)
                         .multilineTextAlignment(.center)
                         .padding(.leading, 16)

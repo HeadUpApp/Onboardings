@@ -41,6 +41,7 @@ public struct SecondVideoView: View {
                     Text("Block apps by schedule")
                         .font(.interMedium(size: 34))
                         .kerning(0.36)
+                        .fixedSize(horizontal: false, vertical: true)
                         .foregroundStyle(Color.white)
                         .multilineTextAlignment(.center)
                         .padding(.leading, 16)

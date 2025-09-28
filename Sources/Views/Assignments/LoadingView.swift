@@ -7,10 +7,7 @@ public struct LoadingView: View {
     @State private var currentSubTextIndex = 0
     
     
-    let subTexts = [
-        "Estimating lifetime phone usage…",
-        "Estimating your potential time saved…"
-    ]
+    let subTexts: [String]
     
     let onComplete: () -> Void
     
@@ -18,7 +15,8 @@ public struct LoadingView: View {
     private let mainTextTimer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     private let subTextTimer = Timer.publish(every: 1.5, on: .main, in: .common).autoconnect()
     
-    public init(onComplete: @escaping () -> Void) {
+    public init(_ subTexts: [String], onComplete: @escaping () -> Void) {
+        self.subTexts = subTexts
         self.onComplete = onComplete
     }
     

@@ -1,20 +1,22 @@
+import StoreKit
 import SwiftUI
 
 public struct ReviewView: View {
     let onNext: () -> Void
     @State private var showReviewIndices: [Bool] = [false, false, false]
-    
+    @Environment(\.requestReview) private var requestReview
+
     public init(onNext: @escaping () -> Void) {
         self.onNext = onNext
     }
-    
+
     public var body: some View {
         GeometryReader { geometry in
             let screenHeight = geometry.size.height
             let screenWidth = geometry.size.width
             ZStack {
                 Color.appBackground.ignoresSafeArea()
-                
+
                 ScrollView {
                     VStack(spacing: 0) {
                         Image(bundleResource: "review")
@@ -22,29 +24,26 @@ public struct ReviewView: View {
                             .scaledToFill()
                             .frame(width: 300, height: 128)
                             .padding(.top, 33)
-                        
+
                         VStack(spacing: 10) {
                             // Первый отзыв
                             Image(bundleResource: "firstman")
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
+                                .frame(width: screenWidth * 0.9)
                                 .offset(y: showReviewIndices[0] ? 0 : -100)
                                 .opacity(showReviewIndices[0] ? 1 : 0)
-                            
+
                             // Второй отзыв
                             Image(bundleResource: "secondgirl")
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
+                                .frame(width: screenWidth * 0.9)
                                 .offset(y: showReviewIndices[1] ? 0 : -100)
                                 .opacity(showReviewIndices[1] ? 1 : 0)
-                            
+
                             // Третий отзыв
                             Image(bundleResource: "thirdMan")
                                 .resizable()
-                                .scaledToFit()
-                                .frame(width: screenWidth * 0.9, height: screenHeight * 0.3)
+                                .frame(width: screenWidth * 0.9)
                                 .offset(y: showReviewIndices[2] ? 0 : -100)
                                 .opacity(showReviewIndices[2] ? 1 : 0)
                         }
@@ -63,6 +62,7 @@ public struct ReviewView: View {
                 VStack {
                     Spacer()
                     Button {
+                        requestReview()
                         onNext()
                     } label: {
                         Text("Continue")
@@ -87,4 +87,8 @@ public struct ReviewView: View {
             }
         }
     }
+}
+
+#Preview {
+    ReviewView {}
 }

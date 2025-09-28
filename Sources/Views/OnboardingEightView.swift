@@ -32,6 +32,7 @@ public struct OnboardingEightView: View {
                         
                         Image(bundleResource: "sevenViewGraphic")
                             .resizable()
+                            .scaledToFit()
                             .frame(maxWidth: screenWidth * 0.80, maxHeight: isSmallScreen ? screenHeight * 0.64 : screenHeight * 0.72)
                     }
                     .padding(.top, isSmallScreen ? screenHeight * 0.24 : screenHeight * 0.2)
