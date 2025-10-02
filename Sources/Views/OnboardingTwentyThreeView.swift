@@ -20,7 +20,7 @@ public struct OnboardingTwentyThreeView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                    .frame(height: screenHeight)
+                    .frame(height: screenHeight, alignment: .bottom)
                     .padding(.top, screenHeight * 0.04)
                 
                 VStack {
@@ -59,11 +59,14 @@ public struct OnboardingTwentyThreeView: View {
     }
     private var textContent: Text {
         let part1 = Text("HeadUp users cut\n")
-        let part2 = Text("screen time by 70%—\n")
-        let part3 = Text("that’s ")
-        let part4 = Text("5 years of life.")
+        let part2 = Text("screen time by 70%\n— ")
+        let part4 = Text("5 years back")
             .foregroundStyle(AppGradient.textPrimary)
             .font(.interMedium(size: 36))
-        return part1 + part2 + part3 + part4
+        return part1 + part2 + part4
     }
+}
+
+#Preview {
+    OnboardingTwentyThreeView {}
 }

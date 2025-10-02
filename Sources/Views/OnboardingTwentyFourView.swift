@@ -20,7 +20,7 @@ public struct OnboardingTwentyFourView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                    .frame(height: screenHeight)
+                    .frame(height: screenHeight, alignment: .bottom)
                     .padding(.top, screenHeight * 0.04)
                 
                 VStack {
@@ -67,4 +67,8 @@ public struct OnboardingTwentyFourView: View {
         let part4 = Text("sleep quality.")
         return part1 + part2 + part3 + part4
     }
+}
+
+#Preview {
+    OnboardingTwentyFourView {}
 }

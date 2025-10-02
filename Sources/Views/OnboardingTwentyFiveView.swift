@@ -59,8 +59,8 @@ public struct OnboardingTwentyFiveView: View {
     }
     
     private var textContent: Text {
-        let part1 = Text("Along with\n")
-        let part2 = Text("a ")
+        let part1 = Text("n addition, users\n")
+        let part2 = Text("see a ")
         let part3 = Text("40% boost ")
             .foregroundStyle(AppGradient.textPrimary)
             .font(.interMedium(size: 36))
@@ -68,4 +68,8 @@ public struct OnboardingTwentyFiveView: View {
         let part5 = Text("work productivity.")
         return part1 + part2 + part3 + part4 + part5
     }
+}
+
+#Preview {
+    OnboardingTwentyFiveView {}
 }

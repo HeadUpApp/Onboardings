@@ -60,11 +60,15 @@ public struct OnboardingTwentyTwoView: View {
     }
     private var textContent: Text {
         let part1 = Text("But there are\n")
-        let part2 = Text("some good news!\n")
-        let part3 = Text("We can change that.")
+        let part2 = Text("some good news.\n")
+        let part3 = Text("You can change it.")
             .foregroundStyle(AppGradient.textPrimary)
             .font(.interMedium(size: 36))
         return part1 + part2 + part3
         
     }
+}
+
+#Preview {
+    OnboardingTwentyTwoView {}
 }
