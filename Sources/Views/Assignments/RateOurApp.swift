@@ -4,6 +4,7 @@ public struct RateOurAppView: View {
     let onNext: () -> Void
     @State private var showReviewIndices: [Bool] = [false, false, false]
     @State private var showContent = false
+    @Environment(\.requestReview) private var requestReview
     
     public init(onNext: @escaping () -> Void) {
         self.onNext = onNext
@@ -116,6 +117,7 @@ public struct RateOurAppView: View {
                 VStack {
                     Spacer()
                     Button {
+                        requestReview()
                         onNext()
                     } label: {
                         Text("Continue")

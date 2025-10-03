@@ -82,3 +82,7 @@ public struct VideoOnbView: View {
         return part1 + part2 + part3 + part4
     }
 }
+
+#Preview {
+    VideoOnbView {}
+}

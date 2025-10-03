@@ -144,3 +144,7 @@ public struct FourthVideoView: View {
 }
 
 private class BundleFinder {}
+
+#Preview {
+    FourthVideoView {}
+}
